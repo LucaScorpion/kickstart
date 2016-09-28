@@ -1,28 +1,28 @@
 #!/bin/bash
 
 # The link to download the JDK from.
-oraclesite="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+oracleSite="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
 
 # Download the Oracle JDK.
 printf "Downloading Oracle JDK.\n"
-raw=$(curl -s $oraclesite | grep -Po "\['jdk-\d+u\d+-linux-x64.tar.gz'\] = \{.*?\}" | head -1)
-jdklink=$(echo $raw | grep -Po "http://.*tar\.gz")
-jdktar=$(echo $jdklink | sed "s/^.*\///")
-curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $jdklink > "/tmp/${jdktar}"
+raw=$(curl -s $oracleSite | grep -Po "\['jdk-\d+u\d+-linux-x64.tar.gz'\] = \{.*?\}" | head -1)
+downloadLink=$(echo $raw | grep -Po "http://.*tar\.gz")
+jdkTar=$(echo $downloadLink | sed "s/^.*\///")
+curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > "/tmp/${jdkTar}"
 #TODO: Verify SHA256 sum.
 
 # Package the JDK,
 printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
-yes | sudo -u $SUDO_USER make-jpkg "/tmp/${jdktar}" &> /dev/null
+yes | sudo -u $SUDO_USER make-jpkg "/tmp/${jdkTar}" &> /dev/null
 
 # Install the JDK.
 printf "Installing JDK.\n"
-jdkversion=$(echo $jdktar | grep -Po "\d+u\d+")
-jdkmajor=$(echo $jdkversion | grep -Po "\d+" | head -1)
-jdkdeb="oracle-java${jdkmajor}-jdk_${jdkversion}_amd64.deb"
-dpkg -iG $jdkdeb > /dev/null
+jdkVersion=$(echo $jdkTar | grep -Po "\d+u\d+")
+jdkMajor=$(echo $jdkVersion | grep -Po "\d+" | head -1)
+jdkDeb="oracle-java${jdkMajor}-jdk_${jdkVersion}_amd64.deb"
+dpkg -iG $jdkDeb > /dev/null
 
 # Clean up.
 printf "Cleaning up.\n"
-rm "/tmp/${jdktar}"
-rm $jdkdeb
+rm "/tmp/${jdkTar}"
+rm $jdkDeb

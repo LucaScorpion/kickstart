@@ -5,9 +5,9 @@ packages=(sudo git curl zsh screenfetch filezilla gimp bless qbittorrent java-pa
 
 # Set the sources.list file to contain all the standard repos.
 printf "Updating sources.list (a backup will be created).\n"
-listfile="/etc/apt/sources.list"
-mv $listfile "$listfile.bak"
-cp -f ./sources $listfile
+sourcesFile="/etc/apt/sources.list"
+mv $sourcesFile "$sourcesFile.bak"
+cp -f ./sources $sourcesFile
 
 # Update the package list, install the basic packages.
 printf "Updating package list.\n"
