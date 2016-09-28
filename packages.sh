@@ -7,7 +7,7 @@ packages=(sudo git curl zsh screenfetch filezilla gimp bless qbittorrent fakeroo
 echo "Updating sources.list (a backup will be created)."
 listfile="/etc/apt/sources.list"
 mv $listfile "$listfile.bak"
-cp ./sources $listfile
+cp -f ./sources $listfile
 
 # Update the package list, install the basic packages.
 echo "Updating package list."
