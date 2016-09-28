@@ -9,8 +9,9 @@ fi
 
 # Execute the helper scripts.
 ./packages.sh
-./jdk.sh
+./shell.sh
 ./templates.sh
+./jdk.sh
 
 # That's all folks!
 printf "Done!\n"

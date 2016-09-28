@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The packages to install.
-packages=(sudo git curl zsh screenfetch filezilla gimp bless qbittorrent java-package fonts-powerline)
+packages=(sudo git curl screenfetch filezilla gimp bless qbittorrent java-package fonts-powerline)
 
 # Set the sources.list file to contain all the standard repos.
 printf "Updating sources.list (a backup will be created).\n"
@@ -18,12 +18,3 @@ do
 	printf "%s %s\n" "-" $package
 	apt-get -qq -y install $package 
 done
-printf "Done installing packages.\n"
-
-# Set the default shell to zsh.
-printf "Setting default shell to zsh.\n"
-chsh -s /bin/zsh
-
-# Install Oh My Zsh for the current user.
-printf "Installing Oh My Zsh.\n"
-sudo -u $SUDO_USER sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
