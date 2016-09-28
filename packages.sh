@@ -4,26 +4,26 @@
 packages=(sudo git curl zsh screenfetch filezilla gimp bless qbittorrent fakeroot java-package expect fonts-powerline)
 
 # Set the sources.list file to contain all the standard repos.
-echo "Updating sources.list (a backup will be created)."
+printf "Updating sources.list (a backup will be created).\n"
 listfile="/etc/apt/sources.list"
 mv $listfile "$listfile.bak"
 cp -f ./sources $listfile
 
 # Update the package list, install the basic packages.
-echo "Updating package list."
+printf "Updating package list.\n"
 apt-get -qq update
-echo "Installing packages:"
+printf "Installing packages:\n"
 for package in ${packages[*]}
 do
-	echo "- $package"
+	printf "%s %s\n" "-" $package
 	apt-get -qq -y install $package 
 done
-echo "Done installing packages."
+printf "Done installing packages.\n"
 
 # Set the default shell to zsh.
-echo "Setting default shell to zsh."
+printf "Setting default shell to zsh.\n"
 chsh -s /bin/zsh
 
 # Install Oh My Zsh for the current user.
-echo "Installing Oh My Zsh."
+printf "Installing Oh My Zsh.\n"
 sudo -u $SUDO_USER sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
