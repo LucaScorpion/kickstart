@@ -13,7 +13,7 @@ curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > "
 
 # Package the JDK,
 printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
-yes | sudo -u $SUDO_USER make-jpkg "/tmp/${jdkTar}" &> /dev/null
+yes | sudo -u $(logname) make-jpkg "/tmp/${jdkTar}" &> /dev/null
 
 # Install the JDK.
 printf "Installing JDK.\n"
