@@ -15,4 +15,3 @@ fi
 
 # That's all folks!
 printf "Done!\n"
-exit 0
