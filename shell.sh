@@ -15,3 +15,8 @@ sudo -u $(logname) sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyru
 # Download the Bullet Train theme.
 printf "Downloading Bullet Train theme.\n"
 curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme" > /home/$(logname)/.oh-my-zsh/themes/bullet-train.zsh-theme
+
+# Copy zsh configuration file.
+printf "Copying zsh configuration."
+mv /home/$(logname)/.zshrc /home/$(logname)/.zshrc.bak
+cp zshrc /home/$(logname)/.zshrc
