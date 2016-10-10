@@ -1,37 +1,11 @@
 #!/bin/bash
 
-# The link to download the JDK from.
-oracleSite="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+# Copy the jdk8.list file.
+printf "Copying jdk 8 ppa source file.\n"
+cp jdk8-ppa.list /etc/apt/sources.list.d/jdk8-ppa.list
 
-# Download the Oracle JDK.
-printf "Downloading Oracle JDK.\n"
-raw=$(curl -s $oracleSite | grep -Po "\['jdk-\d+u\d+-linux-x64.tar.gz'\] = \{.*?\}" | head -1)
-downloadLink=$(echo $raw | grep -Po "http://.*tar\.gz")
-jdkTar=$(echo $downloadLink | sed "s/^.*\///")
-curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > "/tmp/${jdkTar}"
-
-# Verify the SHA256 sum.
-printf "Verifying downloaded file."
-sha=$(echo $raw | grep -Po "(?<=SHA256\":\")[a-z0-9]+")
-calcSha=$(sha256sum $jdkTar)
-
-if [ "$sha" = "$calcSha" ]
-then
-	# Package the JDK,
-	printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
-	yes | sudo -u $(logname) make-jpkg "/tmp/${jdkTar}" &> /dev/null
-
-	# Install the JDK.
-	printf "Installing JDK.\n"
-	jdkVersion=$(echo $jdkTar | grep -Po "\d+u\d+")
-	jdkMajor=$(echo $jdkVersion | grep -Po "\d+" | head -1)
-	jdkDeb="oracle-java${jdkMajor}-jdk_${jdkVersion}_amd64.deb"
-	dpkg -iG $jdkDeb > /dev/null
-else
-	printf "Calculated hash does not match found signature, skipping."
-fi
-
-# Clean up.
-printf "Cleaning up.\n"
-rm "/tmp/${jdkTar}"
-rm $jdkDeb
+# Update the package list, install the oracle jdk package.
+printf "Updating package list.\n"
+apt-get -qq update
+printf "Installing oracle jdk 8 package.\n"
+apt-get -qq --force-yes install oracle-java8-installer
