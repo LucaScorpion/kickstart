@@ -14,7 +14,7 @@ curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > $
 # Verify the SHA256 sum.
 printf "Verifying downloaded file.\n"
 sha=$(echo $raw | grep -Po "(?<=SHA256\":\")[a-z0-9]+")
-calcSha=$(sha256sum $tmpTar | grep -Po "[0-9a-z]+" | head -1)
+calcSha=$(sha256sum $tmpTar | grep -Po ".+(?= )")
 
 if [ "$sha" = "$calcSha" ]
 then
