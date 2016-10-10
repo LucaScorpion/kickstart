@@ -8,12 +8,13 @@ printf "Downloading Oracle JDK.\n"
 raw=$(curl -s $oracleSite | grep -Po "\['jdk-\d+u\d+-linux-x64.tar.gz'\] = \{.*?\}" | head -1)
 downloadLink=$(echo $raw | grep -Po "http://.*tar\.gz")
 jdkTar=$(echo $downloadLink | sed "s/^.*\///")
-curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > "/tmp/${jdkTar}"
+tmpTar="/tmp/${jdkTar}"
+curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > $tmpTar
 
 # Verify the SHA256 sum.
-printf "Verifying downloaded file."
+printf "Verifying downloaded file.\n"
 sha=$(echo $raw | grep -Po "(?<=SHA256\":\")[a-z0-9]+")
-calcSha=$(sha256sum $jdkTar)
+calcSha=$(sha256sum $tmpTar | grep -Po "[0-9a-z]+" | head -1)
 
 if [ "$sha" = "$calcSha" ]
 then
@@ -28,10 +29,10 @@ then
 	jdkDeb="oracle-java${jdkMajor}-jdk_${jdkVersion}_amd64.deb"
 	dpkg -iG $jdkDeb > /dev/null
 else
-	printf "Calculated hash does not match found signature, skipping."
+	printf "Calculated hash does not match found signature, skipping.\n"
 fi
 
 # Clean up.
 printf "Cleaning up.\n"
-rm "/tmp/${jdkTar}"
+rm $tmpTar
 rm $jdkDeb
