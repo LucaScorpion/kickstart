@@ -16,7 +16,7 @@ printf "Verifying downloaded file.\n"
 sha=$(echo $raw | grep -Po "(?<=SHA256\":\")[a-z0-9]+")
 calcSha=$(sha256sum $tmpTar | grep -Po ".+(?= )")
 
-if [ "$sha" = "$calcSha" ]
+if [ "$sha" != "$calcSha" ]
 then
 	# Package the JDK,
 	printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
@@ -30,9 +30,13 @@ then
 	dpkg -iG $jdkDeb > /dev/null
 else
 	printf "Calculated hash does not match found signature, skipping.\n"
+	exit 1
 fi
 
 # Clean up.
 printf "Cleaning up.\n"
 rm $tmpTar
-rm $jdkDeb
+if [ -z "$jdkDeb" ]
+then
+	rm $jdkDeb
+fi
