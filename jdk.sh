@@ -14,9 +14,9 @@ curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > $
 # Verify the SHA256 sum.
 printf "Verifying downloaded file.\n"
 sha=$(echo $raw | grep -Po "(?<=SHA256\":\")[a-z0-9]+")
-calcSha=$(sha256sum $tmpTar | grep -Po ".+(?= )")
+calcSha=$(sha256sum $tmpTar | awk '{print $1}')
 
-if [ "$sha" != "$calcSha" ]
+if [ "$sha" == "$calcSha" ]
 then
 	# Package the JDK,
 	printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
@@ -30,13 +30,12 @@ then
 	dpkg -iG $jdkDeb > /dev/null
 else
 	printf "Calculated hash does not match found signature, skipping.\n"
-	exit 1
 fi
 
 # Clean up.
 printf "Cleaning up.\n"
 rm $tmpTar
-if [ -z "$jdkDeb" ]
+if [ -n "$jdkDeb" ]
 then
 	rm $jdkDeb
 fi
