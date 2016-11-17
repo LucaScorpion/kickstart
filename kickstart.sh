@@ -12,6 +12,7 @@ fi
 ./shell.sh
 ./templates.sh
 ./jdk.sh
+./vscode.sh
 
 # That's all folks!
 printf "Done!\n"
