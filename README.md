@@ -7,6 +7,7 @@ A collection of scripts that will kickstart a fresh Debian installation.
 - shell.sh: download and install zsh and Oh My Zsh, set the zsh configuration.
 - templates.sh: add a number of useful templates to the ~/Templates folder.
 - jdk.sh: download the latest Oracle JDK, package and install it using java-package.
+- vscode.sh: download and install Visual Studio Code.
 
 ### Adjustments
 Most of the scripts are based on personal preference (e.g. the packages to install, the templates).
