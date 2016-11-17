@@ -9,7 +9,7 @@ raw=$(curl -s $oracleSite | grep -Po "\['jdk-\d+u\d+-linux-x64.tar.gz'\] = \{.*?
 downloadLink=$(echo $raw | grep -Po "http://.*tar\.gz")
 jdkTar=$(echo $downloadLink | sed "s/^.*\///")
 tmpTar="/tmp/${jdkTar}"
-curl -L -# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > $tmpTar
+curl -L# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > $tmpTar
 
 # Verify the SHA256 sum.
 printf "Verifying downloaded file.\n"

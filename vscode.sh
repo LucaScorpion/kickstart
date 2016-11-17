@@ -6,7 +6,7 @@ link="https://go.microsoft.com/fwlink/?LinkID=760868"
 # Download the file.
 printf "Downloading Visual Studio Code.\n"
 tmpDeb="/tmp/vscode.deb"
-curl -L -# https://go.microsoft.com/fwlink/?LinkID=760868 > $tmpDeb
+curl -L# https://go.microsoft.com/fwlink/?LinkID=760868 > $tmpDeb
 
 # Install it.
 printf "Installing VS Code.\n"
