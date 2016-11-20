@@ -13,6 +13,7 @@ fi
 ./templates.sh
 ./jdk.sh
 ./vscode.sh
+./chrome.sh
 
 # That's all folks!
 printf "Done!\n"
