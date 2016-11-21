@@ -9,9 +9,12 @@ sourcesFile="/etc/apt/sources.list"
 mv $sourcesFile "$sourcesFile.bak"
 cp -f ./sources $sourcesFile
 
-# Update the package list, install the basic packages.
-printf "Updating package list.\n"
+# Update the package list and upgrade packages.
+printf "Updating package list and upgrading packages.\n"
 apt-get -qq update
+apt-get -qq -y upgrade
+
+# Install the packages.
 printf "Installing packages:\n"
 for package in ${packages[*]}
 do
