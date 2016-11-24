@@ -15,6 +15,7 @@ fi
 ./vscode.sh
 ./chrome.sh
 ./dconf.sh
+./theme.sh
 
 # That's all folks!
 printf "Done!\n"
