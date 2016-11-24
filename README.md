@@ -21,4 +21,4 @@ Here are the items that can be changed easily:
 - The templates, change the content of Templates/.
 - The sources file, change the sources file.
 - The zsh configuration, change the zshrc file.
-- The dconf values, change the values in dconf.sh.
+- The dconf values, change the entries in dconf.sh.

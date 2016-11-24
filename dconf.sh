@@ -1,6 +1,12 @@
 #!/bin/bash
 
+# A function to set an entry.
+function entry
+{
+	sudo -u $(logname) dconf write $1 $2
+}
+
 # Set dconf entries.
 printf "Setting dconf entries.\n"
-dconf write /org/gnome/nautilus/preferences/always-use-location-entry true
+entry /org/gnome/nautilus/preferences/always-use-location-entry true
 
