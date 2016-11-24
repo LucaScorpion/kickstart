@@ -14,6 +14,7 @@ fi
 ./jdk.sh
 ./vscode.sh
 ./chrome.sh
+./dconf.sh
 
 # That's all folks!
 printf "Done!\n"
