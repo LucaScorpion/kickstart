@@ -1,0 +1,18 @@
+{
+	// Editor
+	"editor.insertSpaces": false,
+
+	// Files
+	"files.trimTrailingWhitespace": true,
+
+	// CSS
+	"css.lint.important": "warning",
+	"css.lint.float": "warning",
+
+	// HTML
+	"html.suggest.angular1": false,
+	"html.suggest.ionic": false,
+
+	// Telemetry
+	"telemetry.enableTelemetry": false
+}

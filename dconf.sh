@@ -8,5 +8,3 @@ function entry
 
 # Set dconf entries.
 printf "Setting dconf entries.\n"
-entry /org/gnome/nautilus/preferences/always-use-location-entry true
-
