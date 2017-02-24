@@ -17,6 +17,6 @@ printf "Downloading Bullet Train theme.\n"
 curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme" > /home/$(logname)/.oh-my-zsh/themes/bullet-train.zsh-theme
 
 # Copy zsh configuration file.
-printf "Copying zsh configuration."
+printf "Copying zsh configuration (a backup will be created).\n"
 mv /home/$(logname)/.zshrc /home/$(logname)/.zshrc.bak
 cp zshrc /home/$(logname)/.zshrc

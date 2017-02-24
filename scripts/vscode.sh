@@ -13,8 +13,9 @@ printf "Installing VS Code.\n"
 dpkg -iG $tmpDeb > /dev/null
 
 # Set the user settings.
-printf "Setting user settings."
-cp vscode.json /home/$(logname)/.config/Code/User/settings.json
+printf "Setting user settings.\n"
+mkdir -p /home/$(logname)/.config/Code/User/
+cp ../resources/vscode.json /home/$(logname)/.config/Code/User/settings.json
 
 # Clean up.
 printf "Cleaning up.\n"

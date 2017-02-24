@@ -8,3 +8,4 @@ function entry
 
 # Set dconf entries.
 printf "Setting dconf entries.\n"
+entry /org/gnome/nautilus/preferences/sort-directories-first true

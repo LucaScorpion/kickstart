@@ -7,7 +7,7 @@ packages=(sudo git curl screenfetch filezilla gimp bless qbittorrent java-packag
 printf "Updating sources.list (a backup will be created).\n"
 sourcesFile="/etc/apt/sources.list"
 mv $sourcesFile "$sourcesFile.bak"
-cp -f ./sources $sourcesFile
+cp ../resources/sources.list $sourcesFile
 
 # Update the package list and upgrade packages.
 printf "Updating package list and upgrading packages.\n"
@@ -19,5 +19,5 @@ printf "Installing packages:\n"
 for package in ${packages[*]}
 do
 	printf "%s %s\n" "-" $package
-	apt-get -qq -y install $package 
+	apt-get -qq -y install $package
 done
