@@ -7,6 +7,6 @@ echo $entry > /etc/apt/sources.list.d/vertex-theme.list
 
 # Update and install the Vertex theme.
 printf "Updating package list.\n"
-apt-get -qq update
+sudo apt update > /dev/null
 printf "Installing Vertex theme.\n"
-apt-get -qq -y install vertex-theme
+sudo apt -y install vertex-theme > /dev/null
