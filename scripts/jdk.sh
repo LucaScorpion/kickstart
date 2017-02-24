@@ -20,16 +20,17 @@ if [ "$sha" == "$calcSha" ]
 then
 	# Package the JDK,
 	printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
-	yes | sudo -u $(logname) make-jpkg "/tmp/${jdkTar}" &> /dev/null
+	yes | make-jpkg "/tmp/${jdkTar}" &> /dev/null # Redirect stderr too, make-jpkg will print a lot of warnings.
 
 	# Install the JDK.
 	printf "Installing JDK.\n"
 	jdkVersion=$(echo $jdkTar | grep -Po "\d+u\d+")
 	jdkMajor=$(echo $jdkVersion | grep -Po "\d+" | head -1)
 	jdkDeb="oracle-java${jdkMajor}-jdk_${jdkVersion}_amd64.deb"
-	dpkg -iG $jdkDeb > /dev/null
+	sudo dpkg -iG $jdkDeb > /dev/null
 else
 	printf "Calculated hash does not match found signature, skipping.\n"
+	exit 1
 fi
 
 # Clean up.

@@ -10,12 +10,12 @@ curl -L# https://go.microsoft.com/fwlink/?LinkID=760868 > $tmpDeb
 
 # Install it.
 printf "Installing VS Code.\n"
-dpkg -iG $tmpDeb > /dev/null
+sudo dpkg -iG $tmpDeb > /dev/null
 
 # Set the user settings.
 printf "Setting user settings.\n"
-mkdir -p /home/$(logname)/.config/Code/User/
-cp ../resources/vscode.json /home/$(logname)/.config/Code/User/settings.json
+mkdir -p ~/.config/Code/User/
+cp ../resources/vscode.json ~/.config/Code/User/settings.json
 
 # Clean up.
 printf "Cleaning up.\n"
