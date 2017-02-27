@@ -22,7 +22,6 @@ fi
 ./scripts/vscode.sh
 ./scripts/chrome.sh
 ./scripts/dconf.sh
-./scripts/theme.sh
 
 # That's all folks!
 printf "Done!\n"

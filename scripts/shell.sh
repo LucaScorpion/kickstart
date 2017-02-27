@@ -2,7 +2,7 @@
 
 # Install zsh.
 printf "Installing zsh.\n"
-sudo apt -y install zsh > /dev/null
+sudo apt-get -y install zsh > /dev/null
 
 # Set the default shell to zsh.
 printf "Setting default shell to zsh.\n"
@@ -19,4 +19,4 @@ curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-the
 # Copy zsh configuration file.
 printf "Copying zsh configuration (a backup will be created).\n"
 mv ~/.zshrc ~/.zshrc.bak
-cp zshrc ~/.zshrc
+cp ../resources/zshrc ~/.zshrc

@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Check if java-package is installed.
+if [ ! $(which make-jpkg) ]
+then
+	printf "This script requires java-package to be installed.\n"
+	exit 1
+fi
+
 # The link to download the JDK from.
 oracleSite="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
 
