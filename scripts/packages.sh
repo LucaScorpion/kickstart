@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The packages to install.
-packages=(git curl screenfetch filezilla gimp bless qbittorrent java-package fonts-powerline apt-transport-https maven)
+packages=(git curl screenfetch filezilla gimp bless qbittorrent java-package fonts-powerline apt-transport-https maven java-common)
 
 # Set the sources.list file to contain all the standard repos.
 printf "Updating sources.list (a backup will be created).\n"
