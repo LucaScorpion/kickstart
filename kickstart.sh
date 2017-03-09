@@ -14,6 +14,9 @@ then
 	exit 2
 fi
 
+# Make sure the ~/bin directory exists.
+mkdir ~/bin
+
 # Execute the helper scripts.
 ./scripts/packages.sh
 ./scripts/shell.sh
