@@ -7,6 +7,6 @@ echo $entry | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
 # Update and install chrome.
 printf "Updating package list.\n"
-sudo apt-get -qq update
+sudo apt-get update > /dev/null
 printf "Installing Google Chrome.\n"
 sudo apt-get -y install google-chrome-stable > /dev/null

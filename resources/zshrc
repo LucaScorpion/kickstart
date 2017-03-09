@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/$(logname)/.oh-my-zsh
 
-# Set name of the theme to load. (~/.oh-my-zsh/themes/)
+# Set name of the theme to load. (~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/)
 ZSH_THEME="bullet-train"
 
 # Bullet train configuration
@@ -17,7 +17,7 @@ BULLETTRAIN_PROMPT_ORDER=(
 	cmd_exec_time
 )
 
-# Set the plugins to load. (~/.oh-my-zsh/plugins/)
+# Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
 plugins=(
 	git
 	sudo

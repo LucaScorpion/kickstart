@@ -17,15 +17,10 @@ packages=(
 	numlockx
 )
 
-# Set the sources.list file to contain all the standard repos.
-printf "Updating sources.list (a backup will be created).\n"
-sourcesFile="/etc/apt/sources.list"
-sudo mv $sourcesFile "$sourcesFile.bak"
-sudo cp ../resources/sources.list $sourcesFile
-
 # Update the package list and upgrade packages.
-printf "Updating package list and upgrading packages.\n"
+printf "Updating package list.\n"
 sudo apt-get update > /dev/null
+printf "Upgrading packages.\n"
 sudo apt-get -y upgrade > /dev/null
 
 # Install the packages.
