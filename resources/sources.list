@@ -1,8 +1,8 @@
-deb http://httpredir.debian.org/debian jessie non-free contrib main
-deb-src http://httpredir.debian.org/debian jessie non-free contrib main
+deb http://httpredir.debian.org/debian stretch non-free contrib main
+deb-src http://httpredir.debian.org/debian stretch non-free contrib main
 
-deb http://security.debian.org/ jessie/updates main contrib non-free
-deb-src http://security.debian.org/ jessie/updates non-free contrib main
+deb http://security.debian.org/ stretch/updates main contrib non-free
+deb-src http://security.debian.org/ stretch/updates non-free contrib main
 
-deb http://httpredir.debian.org/debian jessie-updates non-free contrib main
-deb-src http://httpredir.debian.org/debian jessie-updates non-free contrib main
+deb http://httpredir.debian.org/debian stretch-updates non-free contrib main
+deb-src http://httpredir.debian.org/debian stretch-updates non-free contrib main
