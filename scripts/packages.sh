@@ -27,6 +27,6 @@ sudo apt-get -y upgrade > /dev/null
 printf "Installing packages:\n"
 for package in ${packages[*]}
 do
-	printf "%s %s\n" "-" $package
+	printf "%s $package\n" "-"
 	sudo apt-get -y install $package > /dev/null
 done
