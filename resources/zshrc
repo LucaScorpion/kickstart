@@ -30,5 +30,3 @@ numlockx on
 # Aliases.
 alias zshconfig="nano ~/.zshrc"
 
-# Environment variables.
-export PATH="$PATH:/home/$(logname)/bin"
