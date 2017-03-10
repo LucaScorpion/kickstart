@@ -29,4 +29,6 @@ numlockx on
 
 # Aliases.
 alias zshconfig="nano ~/.zshrc"
-alias files="nautilus ."
+
+# Environment variables.
+export PATH="$PATH:/home/$(logname)/bin"
