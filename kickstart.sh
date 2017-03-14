@@ -15,7 +15,10 @@ then
 fi
 
 # Make sure the ~/bin directory exists.
-mkdir ~/bin
+if [ ! -f ~/bin ]
+then
+	mkdir ~/bin
+fi
 
 # Execute the helper scripts.
 ./scripts/packages.sh
