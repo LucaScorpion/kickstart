@@ -15,6 +15,7 @@ packages=(
 	maven
 	java-common
 	numlockx
+	vlc
 )
 
 # Update the package list and upgrade packages.
