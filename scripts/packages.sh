@@ -16,6 +16,7 @@ packages=(
 	java-common
 	numlockx
 	vlc
+	libcanberra-gtk-module
 )
 
 # Update the package list and upgrade packages.
