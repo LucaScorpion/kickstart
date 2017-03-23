@@ -28,6 +28,7 @@ fi
 ./scripts/vscode.sh
 ./scripts/chrome.sh
 ./scripts/gsettings.sh
+./scripts/gitconfig.sh
 
 # That's all folks!
 printf "Done!\n"
