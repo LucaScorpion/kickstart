@@ -24,5 +24,9 @@ fi
 
 # Set the user settings.
 printf "Setting user settings.\n"
-mkdir -p ~/.config/Code/User/
-cp ../resources/vscode.json ~/.config/Code/User/settings.json
+userConfig="~/.config/Code/User"
+if [ ! -d "$userConfig" ]
+then
+	mkdir -p $userConfig
+fi
+cp $RESOURCES/vscode.json $userConfig/settings.json

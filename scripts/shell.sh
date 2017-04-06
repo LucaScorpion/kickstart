@@ -11,7 +11,7 @@ else
 
 	# Set the default shell to zsh.
 	printf "Setting default shell to zsh.\n"
-	chsh -s /bin/zsh $(logname)
+	chsh -s /bin/zsh $USER
 fi
 
 # Check if oh-my-zsh is already installed.
@@ -31,5 +31,4 @@ curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-the
 
 # Copy zsh configuration file.
 printf "Copying .zshrc (a backup will be created).\n"
-mv ~/.zshrc ~/.zshrc.bak
-cp ../resources/zshrc ~/.zshrc
+cp -b $RESOURCES/zshrc ~/.zshrc

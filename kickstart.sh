@@ -15,20 +15,28 @@ then
 fi
 
 # Make sure the ~/bin directory exists.
-if [ ! -f ~/bin ]
+if [ ! -d ~/bin ]
 then
 	mkdir ~/bin
 fi
 
+# Get the resources directory.
+oldResources=$RESOURCES
+export RESOURCES=$(realpath ./resources)
+
 # Execute the helper scripts.
-./scripts/packages.sh
-./scripts/shell.sh
-./scripts/templates.sh
-./scripts/jdk.sh
-./scripts/vscode.sh
-./scripts/chrome.sh
-./scripts/gsettings.sh
-./scripts/gitconfig.sh
+for file in scripts/*
+do
+	if [ -x "$file" ]
+	then
+		printf "= $file\n"
+		./$file
+		printf "\n"
+	fi
+done
+
+# Reset the resources variable in case it was set.
+export RESOURCES=$oldResources
 
 # That's all folks!
 printf "Done!\n"
