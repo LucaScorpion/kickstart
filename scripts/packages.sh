@@ -17,6 +17,7 @@ packages=(
 	numlockx
 	vlc
 	libcanberra-gtk-module
+	htop
 )
 
 # Update the package list and upgrade packages.
