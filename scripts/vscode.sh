@@ -11,22 +11,22 @@ else
 	# Download the file.
 	printf "Downloading Visual Studio Code.\n"
 	tmpDeb="/tmp/vscode.deb"
-	curl -L# https://go.microsoft.com/fwlink/?LinkID=760868 > $tmpDeb
+	curl -L# 'https://go.microsoft.com/fwlink/?LinkID=760868' > "$tmpDeb"
 
 	# Install it.
 	printf "Installing VS Code.\n"
-	sudo dpkg -iG $tmpDeb > /dev/null
+	sudo dpkg -iG "$tmpDeb" > /dev/null
 
 	# Clean up.
 	printf "Cleaning up.\n"
-	rm $tmpDeb
+	rm "$tmpDeb"
 fi
 
 # Set the user settings.
-printf "Setting user settings.\n"
+printf "Copying user configuration.\n"
 userConfig="$HOME/.config/Code/User"
 if [ ! -d "$userConfig" ]
 then
-	mkdir -p $userConfig
+	mkdir -p "$userConfig"
 fi
-cp $RESOURCES/vscode.json $userConfig/settings.json
+cp "$RESOURCES/vscode.json" "$userConfig/settings.json"

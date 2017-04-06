@@ -17,7 +17,7 @@ fi
 # Make sure the ~/bin directory exists.
 if [ ! -d "$HOME/bin" ]
 then
-	mkdir $HOME/bin
+	mkdir "$HOME/bin"
 fi
 
 # Get the resources directory.
@@ -30,7 +30,7 @@ do
 	if [ -x "$file" ]
 	then
 		printf "= $(basename $file)\n"
-		./$file $@
+		"./$file" $@
 		printf "\n"
 	fi
 done

@@ -2,4 +2,4 @@
 
 # Copy the files from the templates to the user templates folder.
 printf "Copying templates.\n"
-cp -rf $RESOURCES/templates/. $HOME/Templates
+cp -rf "$RESOURCES/templates/." "$HOME/Templates"
