@@ -24,7 +24,7 @@ fi
 
 # Set the user settings.
 printf "Setting user settings.\n"
-userConfig="~/.config/Code/User"
+userConfig="$HOME/.config/Code/User"
 if [ ! -d "$userConfig" ]
 then
 	mkdir -p $userConfig

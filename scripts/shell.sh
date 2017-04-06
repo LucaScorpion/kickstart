@@ -15,7 +15,7 @@ else
 fi
 
 # Check if oh-my-zsh is already installed.
-if [ -d ~/.oh-my-zsh ]
+if [ -d "$HOME/.oh-my-zsh" ]
 then
 	printf "Oh-my-zsh is already installed, skipping.\n"
 else
@@ -26,9 +26,9 @@ fi
 
 # Download the Bullet Train theme.
 printf "Downloading Bullet Train theme.\n"
-mkdir -p ~/.oh-my-zsh/custom/themes
-curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme" > ~/.oh-my-zsh/custom/themes/bullet-train.zsh-theme
+mkdir -p $HOME/.oh-my-zsh/custom/themes
+curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme" > $HOME/.oh-my-zsh/custom/themes/bullet-train.zsh-theme
 
 # Copy zsh configuration file.
-printf "Copying .zshrc (a backup will be created).\n"
-cp -b $RESOURCES/zshrc ~/.zshrc
+printf "Copying Zsh configuration.\n"
+cp -b $RESOURCES/zshrc $HOME/.zshrc

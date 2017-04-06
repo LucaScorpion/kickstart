@@ -15,9 +15,9 @@ then
 fi
 
 # Make sure the ~/bin directory exists.
-if [ ! -d ~/bin ]
+if [ ! -d "$HOME/bin" ]
 then
-	mkdir ~/bin
+	mkdir $HOME/bin
 fi
 
 # Get the resources directory.
@@ -29,8 +29,8 @@ for file in scripts/*
 do
 	if [ -x "$file" ]
 	then
-		printf "= $file\n"
-		./$file
+		printf "= $(basename $file)\n"
+		./$file $@
 		printf "\n"
 	fi
 done
