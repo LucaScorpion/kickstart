@@ -14,5 +14,6 @@
 	"html.suggest.ionic": false,
 
 	// Telemetry
-	"telemetry.enableTelemetry": false
+	"telemetry.enableTelemetry": false,
+	"qub-xml.telemetry.enabled": false
 }
