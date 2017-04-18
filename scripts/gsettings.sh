@@ -2,6 +2,10 @@
 
 printf "Setting gsettings entries:\n"
 
+# General.
+printf "%s General\n" "-"
+gsettings set org.gnome.shell.overrides focus-change-on-pointer-rest false
+
 # Terminal.
 printf "%s Terminal\n" "-"
 gsettings set org.gnome.Terminal.Legacy.Settings new-terminal-mode tab
