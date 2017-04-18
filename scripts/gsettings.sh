@@ -2,8 +2,13 @@
 
 printf "Setting gsettings entries:\n"
 
-# Gedit preferences.
-printf "%s Gedit preferences\n" "-"
+# Terminal.
+printf "%s Terminal\n" "-"
+gsettings set org.gnome.Terminal.Legacy.Settings new-terminal-mode tab
+gsettings set org.gnome.Terminal.Legacy.Settings menu-accelerator-enabled false
+
+# Gedit.
+printf "%s Gedit\n" "-"
 gsettings set org.gnome.gedit.preferences.editor auto-indent true
 gsettings set org.gnome.gedit.preferences.editor bracket-matching true
 gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
