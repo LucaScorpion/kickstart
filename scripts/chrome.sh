@@ -16,4 +16,4 @@ printf "$entry\n" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 printf "Updating package list.\n"
 sudo apt-get update > /dev/null
 printf "Installing Google Chrome.\n"
-sudo apt-get -y install google-chrome-stable > /dev/null
+sudo apt-get -y --allow-unauthenticated install google-chrome-stable > /dev/null
