@@ -5,6 +5,7 @@ printf "Setting gsettings entries:\n"
 # General.
 printf "%s General\n" "-"
 gsettings set org.gnome.shell.overrides focus-change-on-pointer-rest false
+gsettings set org.gnome.desktop.wm.preferences focus-new-windows strict
 
 # Terminal.
 printf "%s Terminal\n" "-"

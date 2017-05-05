@@ -19,6 +19,7 @@ packages=(
 	libcanberra-gtk-module
 	htop
 	libgconf-2-4
+	dconf-editor
 )
 
 # Update the package list and upgrade packages.
