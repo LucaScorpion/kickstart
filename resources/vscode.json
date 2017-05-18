@@ -15,5 +15,9 @@
 
 	// Telemetry
 	"telemetry.enableTelemetry": false,
-	"qub-xml.telemetry.enabled": false
+	"qub-xml.telemetry.enabled": false,
+	"qub-xml.telemetry.remote": false,
+
+	// Markdown
+	"markdown.preview.scrollEditorWithPreview": false
 }
