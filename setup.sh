@@ -13,7 +13,7 @@ unzip -q -d "/tmp" "$archive"
 
 # Run the kickstart.
 printf "Running kickstart.\n"
-"$extracted/kickstart.sh"
+bash "$extracted/kickstart.sh"
 
 # Remove the archive and extracted files.
 printf "Cleaning up.\n"
