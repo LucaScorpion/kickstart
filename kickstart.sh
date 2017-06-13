@@ -24,12 +24,16 @@ fi
 oldResources=$RESOURCES
 export RESOURCES=$(realpath ./resources)
 
+# Get some colors.
+normal=$(tput sgr0)
+blue=$(tput setaf 14)
+
 # Execute the helper scripts.
 for file in scripts/*
 do
 	if [ -x "$file" ]
 	then
-		printf "= $(basename $file)\n"
+		printf "${blue}= $(basename $file)$normal\n"
 		"./$file" $@
 		printf "\n"
 	fi
