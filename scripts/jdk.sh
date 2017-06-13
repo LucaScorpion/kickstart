@@ -8,7 +8,7 @@ then
 fi
 
 # The link to download the JDK from.
-oracleSite='http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html'
+oracleSite="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
 
 # Download the Oracle JDK.
 printf "Downloading Oracle JDK.\n"

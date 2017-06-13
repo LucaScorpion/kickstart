@@ -20,6 +20,7 @@ packages=(
 	htop
 	libgconf-2-4
 	dconf-editor
+	php7.0
 )
 
 # Update the package list and upgrade packages.

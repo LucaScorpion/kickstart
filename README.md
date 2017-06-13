@@ -1,6 +1,14 @@
 # Debian-kickstart
 A collection of scripts that will kickstart a fresh Debian installation.
 
+### One-line setup
+This command will run the `setup.sh` script, which will download and run the project.
+
+```
+wget -qO- https://raw.githubusercontent.com/LucaScorpion/Debian-kickstart/master/setup.sh | bash
+```
+
+### Running the project
 To execute all scripts, run kickstart.sh.
 This will execute all executable files in the `scripts` directory.
 The scripts are made not just to kickstart a fresh installation, but also to update an existing one.
