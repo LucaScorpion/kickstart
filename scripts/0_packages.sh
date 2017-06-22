@@ -21,6 +21,7 @@ packages=(
 	libgconf-2-4
 	dconf-editor
 	php7.0
+	numix-gtk-theme
 )
 
 # Update the package list and upgrade packages.
