@@ -21,6 +21,17 @@ export KICKSTART_FAST=false
 while (( $# > 0 ))
 do
 	case "$1" in
+		# Print help text.
+		-h|--help)
+			printf "\
+Debian-kickstart
+Usage: ./kickstart.sh [-f|--fast]
+Options:
+	-h, --help		Print this help text.
+	-f, --fast		Fast mode, skip slow scripts.
+"
+			exit
+			;;
 		# Fast mode.
 		-f|--fast)
 			printf "Fast mode enabled, skipping slow scripts.\n"
