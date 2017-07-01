@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Skip in fast mode.
+if [ "$KICKSTART_FAST" = true ]
+then
+	printf "Skipping Oracle JDK.\n"
+	exit
+fi
+
 # Check if java-package is installed.
 if [ ! $(which make-jpkg) ]
 then

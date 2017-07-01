@@ -8,11 +8,32 @@ then
 fi
 
 # Check if we are running as root.
-if [ "$EUID" -eq 0 ]
+if (( "$EUID" == 0 ))
 then
-	printf "This script should not be executed as root. Where necessary, sudo will be used automatically.\n"
+	printf "This script should not be executed as root. Where necessary, sudo will be used.\n"
 	exit 2
 fi
+
+# Initliaze flags to their defaults.
+export KICKSTART_FAST=false
+
+# Parse options.
+while (( $# > 0 ))
+do
+	case "$1" in
+		# Fast mode.
+		-f|--fast)
+			printf "Fast mode enabled, skipping slow scripts.\n"
+			export KICKSTART_FAST=true
+			;;
+		# Invalid options.
+		*)
+			printf "Invalid option: $1\n"
+			exit 3
+	esac
+
+	shift
+done
 
 # Make sure the ~/bin directory exists.
 if [ ! -d "$HOME/bin" ]

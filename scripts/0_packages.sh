@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Skip in fast mode.
+if [ "$KICKSTART_FAST" = true ]
+then
+	printf "Skipping packages.\n"
+	exit
+fi
+
 # The packages to install.
 packages=(
 	git
