@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Skip in fast mode.
-if [ "$KICKSTART_FAST" = true ]
-then
-	printf "Skipping packages.\n"
-	exit
-fi
-
 # The packages to install.
 packages=(
 	git
@@ -33,14 +26,14 @@ packages=(
 
 # Update the package list and upgrade packages.
 printf "Updating package list.\n"
-sudo apt-get update > /dev/null
+sudo apt-get update 1> /dev/null
 printf "Upgrading packages.\n"
-sudo apt-get -y upgrade > /dev/null
+sudo apt-get -y upgrade 1> /dev/null
 
 # Install the packages.
 printf "Installing packages:\n"
 for package in ${packages[*]}
 do
 	printf "%s $package\n" "-"
-	sudo apt-get -y install $package > /dev/null
+	sudo apt-get -y install $package 1> /dev/null
 done

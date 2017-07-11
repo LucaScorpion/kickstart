@@ -8,7 +8,7 @@ then
 fi
 
 # Check if Telegram is already installed.
-if [ -d "/opt/Telegra" ]
+if [ -d "/opt/Telegram" ]
 then
 	printf "Telegram is already installed, skipping.\n"
 	exit
