@@ -11,7 +11,6 @@ packages=(
 	qbittorrent
 	java-package
 	fonts-powerline
-	apt-transport-https
 	maven
 	java-common
 	numlockx

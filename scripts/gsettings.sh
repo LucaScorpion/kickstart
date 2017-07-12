@@ -4,8 +4,6 @@ printf "Setting gsettings entries:\n"
 
 # General.
 printf "%s General\n" "-"
-gsettings set org.gnome.shell.overrides focus-change-on-pointer-rest false
-gsettings set org.gnome.desktop.wm.preferences focus-new-windows strict
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 
 # Terminal.
@@ -21,3 +19,9 @@ gsettings set org.gnome.gedit.preferences.editor display-line-numbers true
 gsettings set org.gnome.gedit.preferences.editor insert-spaces false
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.ui side-panel-visible true
+
+# Nautilus
+printf "%s Nautilus\n" "-"
+gsettings set org.gnome.nautilus.preferences automatic-decompression false
+gsettings set org.gnome.nautilus.preferences default-folder-viewer list-view
+gsettings set org.gnome.nautilus.preferences search-view list-view
