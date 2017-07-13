@@ -25,14 +25,18 @@ packages=(
 
 # Update the package list and upgrade packages.
 printf "Updating package list.\n"
-sudo apt-get update 1> /dev/null
-printf "Upgrading packages.\n"
-sudo apt-get -y upgrade 1> /dev/null
+sudo apt-get -q update
+printf "\nUpgrading packages.\n"
+sudo apt-get -yq upgrade
 
 # Install the packages.
-printf "Installing packages:\n"
+printf "\nInstalling packages.\n"
 for package in ${packages[*]}
 do
-	printf "%s $package\n" "-"
-	sudo apt-get -y install $package 1> /dev/null
+	# Check if the package is already installed.
+	if [[ ! $(dpkg -s $package) ]]
+	then
+		printf "%s $package\n" "-"
+		sudo apt-get -yq install $package
+	fi
 done
