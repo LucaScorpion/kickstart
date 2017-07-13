@@ -16,12 +16,12 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 ### Scripts
 | Script | Explanation |
 | ------ | ----------- |
+| 0_packages.sh | Install a set of useful packages. |
 | bin.sh | Copy a set of scripts to the ~/bin directory. |
-| chrome.sh | Install Google Chrome. |
-| gitconfig.sh | Set git configuration options. |
+| cleanup.sh | Remove unwanted packages. |
+| gitconfig.sh | Check and set git configuration options. |
 | gsettings.sh | Set gsettings values. |
-| jdk.sh | Download the latest Oracle JDK, package and install it. |
-| packages.sh | Install a set of useful packages. |
+| jdk.sh | Add a PPA for the Oracle JDK, install it. |
 | shell.sh | Install Zsh and Oh My Zsh, set the Zsh configuration. |
 | templates.sh | Add a number of useful templates to the ~/Templates directory. |
-| vscode.sh | Install Visual Studio Code. |
+| vscode.sh | Install Visual Studio Code, set the user configuration. |

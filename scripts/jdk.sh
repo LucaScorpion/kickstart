@@ -1,56 +1,20 @@
 #!/bin/bash
 
-# Skip in fast mode.
-if [ "$KICKSTART_FAST" = true ]
+# Check if the JDK is already installed.
+if [[ $(dpkg -s oracle-java8-installer) ]]
 then
-	printf "Skipping Oracle JDK.\n"
+	printf "Oracle JDK is already installed, skipping.\n"
 	exit
 fi
 
-# Check if java-package is installed.
-if [ ! $(which make-jpkg) ]
-then
-	printf "This script requires java-package to be installed.\n"
-	exit 1
-fi
+# Add the public key and repository.
+printf "Adding webupd8team/java PPA repository.\n"
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+printf "\n" | sudo add-apt-repository ppa:webupd8team/java
 
-# The link to download the JDK from.
-oracleSite="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+# Update, install the JDK.
+printf "\nUpdating package list.\n"
+sudo apt-get -q update
 
-# Download the Oracle JDK.
-printf "Downloading Oracle JDK.\n"
-raw=$(curl -s $oracleSite | grep -Po "\['jdk-\d+u\d+-linux-x64.tar.gz'\] = \{.*?\}" | head -1)
-downloadLink=$(echo $raw | grep -Po "http://.*tar\.gz")
-jdkTar=$(echo $downloadLink | sed "s/^.*\///")
-tmpTar="/tmp/${jdkTar}"
-curl -L# --cookie "oraclelicense=accept-securebackup-cookie" $downloadLink > "$tmpTar"
-
-# Verify the SHA256 sum.
-printf "Verifying downloaded file.\n"
-sha=$(echo $raw | grep -Po "(?<=SHA256\":\")[a-z0-9]+")
-calcSha=$(sha256sum $tmpTar | awk '{print $1}')
-
-if [ "$sha" == "$calcSha" ]
-then
-	# Package the JDK,
-	printf "Packaging JDK. Please be patient, this might take a few minutes.\n"
-	yes | make-jpkg "/tmp/${jdkTar}" &> /dev/null # Redirect stderr too, make-jpkg will print a lot of warnings.
-
-	# Install the JDK.
-	printf "Installing JDK.\n"
-	jdkVersion=$(echo $jdkTar | grep -Po "\d+u\d+")
-	jdkMajor=$(echo $jdkVersion | grep -Po "\d+" | head -1)
-	jdkDeb="oracle-java${jdkMajor}-jdk_${jdkVersion}_amd64.deb"
-	sudo dpkg -iG "$jdkDeb" > /dev/null
-else
-	printf "Calculated hash does not match found signature, skipping.\n"
-	exit 1
-fi
-
-# Clean up.
-printf "Cleaning up.\n"
-rm "$tmpTar"
-if [ -n "$jdkDeb" ]
-then
-	rm "$jdkDeb"
-fi
+printf "\nInstalling Oracle JDK.\n"
+sudo apt-get -qy install oracle-java8-installer

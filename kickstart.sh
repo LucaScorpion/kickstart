@@ -14,9 +14,6 @@ then
 	exit 2
 fi
 
-# Initliaze flags to their defaults.
-export KICKSTART_FAST=false
-
 # Parse options.
 while (( $# > 0 ))
 do
@@ -25,24 +22,17 @@ do
 		-h|--help)
 			printf "\
 Debian-kickstart
-Usage: ./kickstart.sh [-f|--fast]
+Usage: ./kickstart.sh
 Options:
 	-h, --help		Print this help text.
-	-f, --fast		Fast mode, skip slow scripts.
 "
 			exit
-			;;
-		# Fast mode.
-		-f|--fast)
-			printf "Fast mode enabled, skipping slow scripts.\n"
-			export KICKSTART_FAST=true
 			;;
 		# Invalid options.
 		*)
 			printf "Invalid option: $1\n"
 			exit 3
 	esac
-
 	shift
 done
 

@@ -9,7 +9,6 @@ packages=(
 	gimp
 	bless
 	qbittorrent
-	java-package
 	fonts-powerline
 	maven
 	java-common
@@ -27,7 +26,7 @@ packages=(
 printf "Updating package list.\n"
 sudo apt-get -q update
 printf "\nUpgrading packages.\n"
-sudo apt-get -yq upgrade
+sudo apt-get -qy upgrade
 
 # Install the packages.
 printf "\nInstalling packages.\n"
@@ -37,6 +36,6 @@ do
 	if [[ ! $(dpkg -s $package) ]]
 	then
 		printf "%s $package\n" "-"
-		sudo apt-get -yq install $package
+		sudo apt-get -qy install $package
 	fi
 done
