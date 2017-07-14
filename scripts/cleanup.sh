@@ -1,17 +1,23 @@
 #!/bin/bash
 
 # The packages to remove.
-unwanted=(
+purge=(
 	gnome-games
 )
 
 # Remove the packages.
-printf "Removing packages:\n"
-for package in ${unwanted[*]}
+printf "Purging packages.\n"
+for package in ${purge[*]}
 do
-	printf "%s $package\n" "-"
-	sudo apt-get -y purge $package 1> /dev/null
+	# Check if the package is installed.
+	if [[ $(dpkg -s $package &> /dev/null) ]]
+	then
+		printf "%s $package\n" "-"
+		sudo apt-get -y purge $package 1> /dev/null
+	fi
 done
 
-# Cleaning up.
+# Clean up.
+printf "\nCleaning up.\n"
 sudo apt-get -y autoremove 1> /dev/null
+sudo apt-get -y autoclean 1> /dev/null
