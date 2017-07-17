@@ -42,21 +42,23 @@ then
 	mkdir "$HOME/bin"
 fi
 
-# Get the resources directory.
+# Get the base and resources directories.
+baseDir=$(dirname $0)
 oldResources=$RESOURCES
-export RESOURCES=$(realpath ./resources)
+export RESOURCES="$baseDir/resources"
 
 # Get some colors.
 normal=$(tput sgr0)
 blue=$(tput setaf 14)
 
 # Execute the helper scripts.
-for file in scripts/*
+scripts="$baseDir/scripts/"*
+for file in $scripts
 do
 	if [ -x "$file" ]
 	then
 		printf "${blue}= $(basename $file)$normal\n"
-		"./$file" $@
+		"$file" $@
 		printf "\n"
 	fi
 done
