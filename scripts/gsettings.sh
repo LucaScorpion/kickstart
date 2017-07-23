@@ -7,6 +7,8 @@ printf "%s Desktop\n" "-"
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
 gsettings set org.gnome.desktop.wm.preferences button-layout appmenu:minimize,maximize,close
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.interface gtk-theme Numix
 
 # Terminal.
 printf "%s Terminal\n" "-"
