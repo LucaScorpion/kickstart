@@ -2,9 +2,11 @@
 
 printf "Setting gsettings entries:\n"
 
-# General.
-printf "%s General\n" "-"
+# Desktop.
+printf "%s Desktop\n" "-"
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+gsettings set org.gnome.desktop.wm.preferences auto-raise true
+gsettings set org.gnome.desktop.wm.preferences button-layout appmenu:minimize,maximize,close
 
 # Terminal.
 printf "%s Terminal\n" "-"
@@ -20,7 +22,7 @@ gsettings set org.gnome.gedit.preferences.editor insert-spaces false
 gsettings set org.gnome.gedit.preferences.editor tabs-size 4
 gsettings set org.gnome.gedit.preferences.ui side-panel-visible true
 
-# Nautilus
+# Nautilus.
 printf "%s Nautilus\n" "-"
 gsettings set org.gnome.nautilus.preferences automatic-decompression false
 gsettings set org.gnome.nautilus.preferences default-folder-viewer list-view
