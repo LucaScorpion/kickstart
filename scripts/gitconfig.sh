@@ -3,7 +3,6 @@
 # Set the git configuration options.
 printf "Setting git configuration options.\n"
 git config --global remote.origin.prune true
-git config --global credential.helper cache
 
 # Set user config.
 printf "Checking git user configuration.\n"
@@ -13,9 +12,11 @@ email=$(git config --global user.email)
 
 if [ -z "$name" ]
 then
-	printf "Enter your name: "
-	read -e name
-	git config --global user.name "$name"
+	# Get the full name from the user profile.
+	printf "Getting full name from user profile.\n"
+	gecosField=$(getent passwd $USER | cut -d ':' -f 5)
+	fullName=$(echo "$gecosField" | cut -d ',' -f 1)
+	git config --global user.name "$fullName"
 fi
 
 if [ -z "$email" ]
