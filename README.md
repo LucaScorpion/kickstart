@@ -16,10 +16,10 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 ### Scripts
 | Script | Explanation |
 | ------ | ----------- |
-| 0_packages.sh | Install a set of useful packages. |
+| 0-packages.sh | Install a set of useful packages. |
 | bin.sh | Copy a set of scripts to the ~/bin directory. |
 | cleanup.sh | Remove unwanted packages. |
-| gitconfig.sh | Check and set git configuration options. |
+| gitconfig.sh | Check and set Git configuration options. |
 | gsettings.sh | Set gsettings values. |
 | jdk.sh | Add a PPA for the Oracle JDK, install it. |
 | shell.sh | Install Zsh and Oh My Zsh, set the Zsh configuration. |
