@@ -21,6 +21,7 @@ packages=(
 	php7.0
 	numix-gtk-theme
 	dirmngr
+	openvpn
 )
 
 # Update the package list and upgrade packages.
