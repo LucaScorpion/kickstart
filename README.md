@@ -21,6 +21,7 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | cleanup.sh | Remove unwanted packages. |
 | gitconfig.sh | Check and set Git configuration options. |
 | gsettings.sh | Set gsettings values. |
+| gtksettings.sh | Set gtk settings. |
 | jdk.sh | Add a PPA for the Oracle JDK, install it. |
 | shell.sh | Install Zsh and Oh My Zsh, set the Zsh configuration. |
 | templates.sh | Add a number of useful templates to the ~/Templates directory. |
