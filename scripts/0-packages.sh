@@ -20,6 +20,7 @@ packages=(
 	dconf-editor
 	php7.0
 	numix-gtk-theme
+	dirmngr
 )
 
 # Update the package list and upgrade packages.
