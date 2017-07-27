@@ -5,7 +5,6 @@ packages=(
 	git
 	curl
 	screenfetch
-	filezilla
 	gimp
 	bless
 	qbittorrent
