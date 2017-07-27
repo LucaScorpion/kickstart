@@ -33,3 +33,5 @@ gsettings set org.gnome.nautilus.preferences search-view list-view
 # Gtk.
 printf "%s Gtk" "-"
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+
+printf "\n"
