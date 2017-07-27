@@ -43,7 +43,7 @@ then
 fi
 
 # Get the base and resources directories.
-baseDir=$(dirname $0)
+baseDir=$(realpath $(dirname $0))
 oldResources=$RESOURCES
 export RESOURCES="$baseDir/resources"
 

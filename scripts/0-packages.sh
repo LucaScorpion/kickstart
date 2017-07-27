@@ -1,27 +1,7 @@
 #!/bin/bash
 
-# The packages to install.
-packages=(
-	git
-	curl
-	screenfetch
-	gimp
-	bless
-	qbittorrent
-	fonts-powerline
-	maven
-	java-common
-	numlockx
-	vlc
-	libcanberra-gtk-module
-	htop
-	libgconf-2-4
-	dconf-editor
-	php7.0
-	numix-gtk-theme
-	dirmngr
-	openvpn
-)
+# Read the packages to install from the resources/packages file.
+readarray packages < "$RESOURCES/packages"
 
 # Update the package list and upgrade packages.
 printf "Updating package list.\n"
