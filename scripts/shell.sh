@@ -8,10 +8,6 @@ else
 	# Install zsh.
 	printf "Installing zsh.\n"
 	sudo apt-get -y install zsh > /dev/null
-
-	# Set the default shell to zsh.
-	printf "Setting default shell to zsh.\n"
-	chsh -s /bin/zsh $USER
 fi
 
 # Check if oh-my-zsh is already installed.
