@@ -3,6 +3,7 @@
 # The packages to remove.
 purge=(
 	gnome-games
+	default-jdk
 )
 
 # Remove the packages.
