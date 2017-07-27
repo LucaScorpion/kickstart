@@ -29,3 +29,7 @@ printf "%s Nautilus\n" "-"
 gsettings set org.gnome.nautilus.preferences automatic-decompression false
 gsettings set org.gnome.nautilus.preferences default-folder-viewer list-view
 gsettings set org.gnome.nautilus.preferences search-view list-view
+
+# Gtk.
+printf "%s Gtk" "-"
+gsettings set org.gtk.Settings.FileChooser sort-directories-first true
