@@ -1,19 +1,26 @@
+# Required for something else.
+libgconf-2-4
+fonts-powerline
+libcanberra-gtk-module
+java-common
+dirmngr
+
+# Utilities.
+screenfetch
+bless
+htop
+dconf-editor
+numlockx
 git
 curl
-screenfetch
-gimp
-bless
-qbittorrent
-fonts-powerline
-maven
-java-common
-numlockx
-vlc
-libcanberra-gtk-module
-htop
-libgconf-2-4
-dconf-editor
 php7.0
-numix-gtk-theme
-dirmngr
+
+# Programs.
 openvpn
+qbittorrent
+gimp
+maven
+vlc
+
+# Others.
+numix-gtk-theme
