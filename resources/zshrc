@@ -27,6 +27,11 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 numlockx on
 
+# Environment variables.
+export GOPATH="$HOME/Projects/go"
+eval $(go env | sed "s/^/export /")
+export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
+
 # Aliases.
 alias zshconfig="nano ~/.zshrc"
 alias files="xdg-open ."

@@ -16,6 +16,7 @@ curl
 php7.0
 stress
 lm-sensors
+golang
 
 # Programs.
 openvpn
