@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Update the package list and upgrade packages.
-printf "Updating package list.\n"
-sudo apt-get -q update
-printf "\nUpgrading packages.\n"
-sudo apt-get -qy upgrade
+# Update the system.
+printf "Upgrading system.\n"
+sudo pacman -Syu
 
 # Install the packages.
 printf "\nInstalling packages.\n"
@@ -17,7 +15,7 @@ do
 	esac
 
 	# Check if the package is already installed.
-	if [[ ! $(dpkg -s $package) ]]
+	if [[ ! $(pacman -Qi $package) ]]
 	then
 		printf "%s $package\n" "-"
 		sudo apt-get -qy install $package

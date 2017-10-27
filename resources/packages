@@ -1,29 +1,16 @@
-# Required for something else.
-libgconf-2-4
-fonts-powerline
-libcanberra-gtk-module
-java-common
-dirmngr
-
-# Utilities.
+# Utilities
 screenfetch
 bless
 htop
-dconf-editor
 numlockx
-git
-curl
-php7.0
-stress
-lm-sensors
-golang
 
-# Programs.
+# Need to check
+golang
+php70
+
+# Programs
 openvpn
 qbittorrent
 gimp
 maven
 vlc
-
-# Others.
-numix-gtk-theme
