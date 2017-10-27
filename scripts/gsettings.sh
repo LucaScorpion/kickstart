@@ -8,7 +8,6 @@ gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
 gsettings set org.gnome.desktop.wm.preferences auto-raise true
 gsettings set org.gnome.desktop.wm.preferences button-layout appmenu:minimize,maximize,close
 gsettings set org.gnome.desktop.interface clock-show-date true
-gsettings set org.gnome.desktop.interface gtk-theme Numix
 
 # Terminal.
 printf "%s Terminal\n" "-"
@@ -26,7 +25,6 @@ gsettings set org.gnome.gedit.preferences.ui side-panel-visible true
 
 # Nautilus.
 printf "%s Nautilus\n" "-"
-gsettings set org.gnome.nautilus.preferences automatic-decompression false
 gsettings set org.gnome.nautilus.preferences default-folder-viewer list-view
 gsettings set org.gnome.nautilus.preferences search-view list-view
 
