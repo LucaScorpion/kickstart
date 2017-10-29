@@ -18,6 +18,6 @@ do
 	if [[ ! $(pacman -Qi $package) ]]
 	then
 		printf "%s $package\n" "-"
-		sudo apt-get -qy install $package
+		#sudo apt-get -qy install $package
 	fi
 done < "$RESOURCES/packages"

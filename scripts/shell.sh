@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Check if zsh is already installed.
-if [ $(which zsh) ]
+if [ $(command -v zsh) ]
 then
 	printf "Zsh is already installed, skipping.\n"
 else
 	# Install zsh.
 	printf "Installing zsh.\n"
-	sudo apt-get -y install zsh > /dev/null
+	#sudo apt-get -y install zsh > /dev/null
 fi
 
 # Check if oh-my-zsh is already installed.
@@ -28,4 +28,4 @@ curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-the
 
 # Copy zsh configuration file.
 printf "Copying Zsh configuration.\n"
-cp -b "$RESOURCES/zshrc" "$HOME/.zshrc"
+#cp -b "$RESOURCES/zshrc" "$HOME/.zshrc"
