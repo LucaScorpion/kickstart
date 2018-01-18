@@ -28,4 +28,4 @@ curl -# "https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-the
 
 # Copy zsh configuration file.
 printf "Copying Zsh configuration.\n"
-#cp -b "$RESOURCES/zshrc" "$HOME/.zshrc"
+cp -b "$RESOURCES/zshrc" "$HOME/.zshrc"

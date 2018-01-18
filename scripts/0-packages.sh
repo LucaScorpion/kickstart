@@ -1,8 +1,15 @@
 #!/bin/bash
 
+# Create the yaourtrc.
+if [ ! -f "$HOME/.yaourtrc" ]
+then
+	printf "Creating yaourtrc file.\n"
+	printf "NOCONFIRM=1\n" > "$HOME/.yaourtrc"
+fi
+
 # Update the system.
 printf "Upgrading system.\n"
-sudo pacman -Syu
+yaourt -Syu
 
 # Install the packages.
 printf "\nInstalling packages.\n"
@@ -15,9 +22,9 @@ do
 	esac
 
 	# Check if the package is already installed.
-	if [[ ! $(pacman -Qi $package) ]]
+	if [[ ! $(yaourt -Q $package) ]]
 	then
 		printf "%s $package\n" "-"
-		sudo pacman -Sy $package
+		yaourt -S $package
 	fi
 done < "$RESOURCES/packages"

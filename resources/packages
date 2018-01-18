@@ -1,17 +1,10 @@
-yaourt
+# Development
+maven
+jetbrains-toolbox
 
 # Utilities
-screenfetch
-bless
-htop
 numlockx
 
-# Need to check
-#golang
-#php70
-
-# Programs
-openvpn
+# Software
 gimp
-maven
 vlc
