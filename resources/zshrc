@@ -33,9 +33,8 @@ if [ $(command -v go) ]
 then
 	export GOPATH="$HOME/Projects/go"
 	eval $(go env | sed "s/^/export /")
+	export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 fi
-
-export PATH="$PATH:$GOROOT/bin:$GOPATH/bin"
 
 # Aliases.
 alias zshconfig="nano ~/.zshrc"
