@@ -1,11 +1,11 @@
 #!/bin/bash
 
-extracted="/tmp/Debian-kickstart-master"
+extracted="/tmp/antergos-kickstart-master"
 archive="$extracted.zip"
 
 # Download the latest master archive from GitHub.
 printf "Downloading archive.\n"
-wget -qO "$archive" "https://github.com/LucaScorpion/Debian-kickstart/archive/master.zip"
+wget -qO "$archive" "https://github.com/LucaScorpion/antergos-kickstart/archive/master.zip"
 
 # Extract the archive.
 printf "Extracting archive.\n"
