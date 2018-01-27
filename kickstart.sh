@@ -21,10 +21,9 @@ do
 		# Print help text.
 		-h|--help)
 			printf "\
-Debian-kickstart
+Antergos Kickstart
+https://github.com/LucaScorpion/antergos-kickstart
 Usage: ./kickstart.sh
-Options:
-	-h, --help		Print this help text.
 "
 			exit
 			;;

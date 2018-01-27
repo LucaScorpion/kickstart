@@ -9,17 +9,19 @@ wget -qO- https://raw.githubusercontent.com/LucaScorpion/antergos-kickstart/mast
 ```
 
 ## Running the scripts
-To execute all scripts, run kickstart.sh.
+To execute all scripts, run `kickstart.sh`.
 This will execute all executable files in the `scripts` directory.
 The scripts are made not just to kickstart a fresh installation, but also to update an existing one.
 
 ## Scripts
-| Script | Explanation |
+| Script | Description |
 | ------ | ----------- |
 | 0-packages.sh | Install a set of useful packages. |
+| gdm.sh | Disable LightDM, enable GDM. |
 | gitconfig.sh | Check and set Git configuration options. |
 | gsettings.sh | Set gsettings values. |
 | gtksettings.sh | Set gtk settings. |
-| shell.sh | Install Zsh and Oh My Zsh, set the Zsh configuration. |
+| shell.sh | Install Oh My Zsh, set the Zsh configuration. |
 | templates.sh | Add a number of useful templates to the ~/Templates directory. |
 | vscode.sh | Set the Visual Studio Code user configuration. |
+| xdgsettings.sh | Set xdg settings. |
