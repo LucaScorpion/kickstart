@@ -2,6 +2,7 @@
 maven
 jetbrains-toolbox
 visual-studio-code-bin
+docker
 
 # Utilities
 numlockx
