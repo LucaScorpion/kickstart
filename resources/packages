@@ -7,7 +7,6 @@ docker
 # Utilities
 numlockx
 zsh
-gdm
 chrome-gnome-shell
 
 # Software
