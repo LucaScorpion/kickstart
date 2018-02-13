@@ -17,7 +17,6 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | Script | Description |
 | ------ | ----------- |
 | 0-packages.sh | Install a set of useful packages. |
-| gdm.sh | Disable LightDM, enable GDM. |
 | gitconfig.sh | Check and set Git configuration options. |
 | gsettings.sh | Set gsettings values. |
 | gtksettings.sh | Set gtk settings. |
