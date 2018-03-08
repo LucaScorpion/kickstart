@@ -9,7 +9,7 @@ fi
 
 # Update the system.
 printf "Upgrading system.\n"
-yaourt -Syu
+yaourt -Syu --aur
 
 # Install the packages.
 printf "\nInstalling packages.\n"
