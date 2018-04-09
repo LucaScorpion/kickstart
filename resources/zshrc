@@ -19,8 +19,10 @@ BULLETTRAIN_PROMPT_ORDER=(
 
 # Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
 plugins=(
+	thefuck
 	git
 	sudo
+	mvn
 )
 
 # User configuration.
