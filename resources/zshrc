@@ -23,6 +23,7 @@ plugins=(
 	git
 	sudo
 	mvn
+	web-search
 )
 
 # User configuration.
