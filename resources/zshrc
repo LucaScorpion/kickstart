@@ -47,3 +47,4 @@ fi
 # Aliases.
 alias zshconfig="nano ~/.zshrc"
 alias files="xdg-open ."
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
