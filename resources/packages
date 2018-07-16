@@ -3,13 +3,16 @@ maven
 jetbrains-toolbox
 visual-studio-code-bin
 docker
+docker-compose
 
 # Utilities
 numlockx
 zsh
-chrome-gnome-shell
 thefuck
-gdm
+
+# Gnome
+chrome-gnome-shell
+gnome-shell-extension-topicons
 
 # Software
 gimp
