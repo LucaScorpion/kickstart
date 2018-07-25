@@ -9,6 +9,7 @@ docker-compose
 numlockx
 zsh
 thefuck
+units
 
 # Gnome
 chrome-gnome-shell
