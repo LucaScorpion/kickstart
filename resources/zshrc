@@ -1,21 +1,10 @@
+#!/bin/zsh
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. (~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/)
-ZSH_THEME="bullet-train"
-
-# Bullet train configuration
-BULLETTRAIN_PROMPT_CHAR=\>
-BULLETTRAIN_STATUS_EXIT_SHOW=true
-BULLETTRAIN_CONTEXT_DEFAULT_USER=luca
-BULLETTRAIN_PROMPT_ORDER=(
-	time
-	context
-	status
-	dir
-	git
-	cmd_exec_time
-)
+ZSH_THEME="spaceship"
 
 # Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
 plugins=(
@@ -27,6 +16,7 @@ plugins=(
 )
 
 # User configuration.
+
 source $ZSH/oh-my-zsh.sh
 numlockx on
 
@@ -45,6 +35,7 @@ then
 fi
 
 # Aliases.
+
 alias zshconfig="nano ~/.zshrc"
 alias files="xdg-open ."
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
