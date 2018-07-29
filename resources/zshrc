@@ -15,6 +15,11 @@ plugins=(
 	web-search
 )
 
+# Theme configuration.
+
+SPACESHIP_EXIT_CODE_SHOW=true
+SPACESHIP_EXIT_CODE_SYMBOL=
+
 # User configuration.
 
 source $ZSH/oh-my-zsh.sh
