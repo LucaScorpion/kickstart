@@ -1,15 +1,8 @@
 # Antergos Kickstart
 A collection of scripts that will kickstart a fresh [Antergos](https://antergos.com/) installation.
 
-## One-line setup
-This command will run the `setup.sh` script, which will download and run the project.
-
-```
-curl -fsSL https://raw.githubusercontent.com/LucaScorpion/antergos-kickstart/master/setup.sh | bash
-```
-
 ## Running the scripts
-To execute all scripts, run `kickstart.sh`.
+To execute all scripts, simply run `kickstart.sh`.
 This will execute all executable files in the `scripts` directory.
 The scripts are made not just to kickstart a fresh installation, but also to update an existing one.
 
