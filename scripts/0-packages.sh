@@ -1,18 +1,7 @@
 #!/bin/bash
 
-# Create the yaourtrc.
-if [ ! -f "$HOME/.yaourtrc" ]
-then
-	printf "Creating yaourtrc file.\n"
-	printf "NOCONFIRM=1\n" > "$HOME/.yaourtrc"
-fi
-
-# Update the system.
-printf "Upgrading system.\n"
-yaourt -Syu --aur
-
 # Install the packages.
-printf "\nInstalling packages.\n"
+printf "Installing packages:\n"
 while read -r package
 do
 	# Check if the line is a comment or empty.

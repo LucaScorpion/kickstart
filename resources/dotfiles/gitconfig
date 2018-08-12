@@ -1,0 +1,7 @@
+[remote "origin"]
+	prune = true
+[commit]
+	gpgsign = true
+[user]
+	name = Luca Scalzotto
+	email = luca@scorpiac.com

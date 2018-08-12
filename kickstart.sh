@@ -1,18 +1,37 @@
 #!/bin/bash
 
+# Get some colors.
+normal=$(tput sgr0)
+blue=$(tput setaf 14)
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+
 # Check if sudo is installed.
-if [ ! $(which sudo) ]
+if [ ! $(command -v sudo) ]
 then
-	printf "These scripts require the sudo package to be installed.\n"
+	printf "${red}These scripts require the sudo package to be installed.${normal}\n"
 	exit 1
 fi
 
 # Check if we are running as root.
 if (( "$EUID" == 0 ))
 then
-	printf "This script should not be executed as root. Where necessary, sudo will be used.\n"
+	printf "${red}This script should not be executed as root. Where necessary, sudo will be used.${normal}\n"
 	exit 2
 fi
+
+# Print the usage text.
+printHelp()
+{
+	printf "\
+Antergos Kickstart
+https://github.com/LucaScorpion/antergos-kickstart
+
+Usage: ./kickstart.sh
+Options:
+-h, --help    View this help text
+"
+}
 
 # Parse options.
 while (( $# > 0 ))
@@ -20,50 +39,30 @@ do
 	case "$1" in
 		# Print help text.
 		-h|--help)
-			printf "\
-Antergos Kickstart
-https://github.com/LucaScorpion/antergos-kickstart
-Usage: ./kickstart.sh
-"
+			printHelp
 			exit
 			;;
 		# Invalid options.
 		*)
-			printf "Invalid option: $1\n"
+			printf "${red}Invalid option: $1${normal}\n"
+			printHelp
 			exit 3
 	esac
 	shift
 done
 
-# Make sure the ~/bin directory exists.
-if [ ! -d "$HOME/bin" ]
-then
-	mkdir "$HOME/bin"
-fi
-
 # Get the base and resources directories.
 baseDir=$(realpath $(dirname $0))
-oldResources=$RESOURCES
 export RESOURCES="$baseDir/resources"
 
-# Get some colors.
-normal=$(tput sgr0)
-blue=$(tput setaf 14)
-
-# Execute the helper scripts.
-scripts="$baseDir/scripts/"*
-for file in $scripts
+# Execute all scripts.
+for file in "$baseDir/scripts/"*
 do
-	if [ -x "$file" ]
-	then
-		printf "${blue}= $(basename $file)$normal\n"
-		"$file" $@
-		printf "\n"
-	fi
+	[ -x "$file" ] || continue
+	printf "${blue}= $(basename "$file")$normal\n"
+	"$file"
+	printf "\n"
 done
 
-# Reset the resources variable in case it was set.
-export RESOURCES=$oldResources
-
 # That's all folks!
-printf "Done!\n"
+printf "${green}Done!${normal}\n"

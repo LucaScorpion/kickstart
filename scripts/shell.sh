@@ -28,7 +28,3 @@ else
 	printf "Updating Spaceship theme.\n"
 	git -C "$spaceshipDir" pull
 fi
-
-# Copy zsh configuration file.
-printf "Copying Zsh configuration.\n"
-cp -b "$RESOURCES/zshrc" "$HOME/.zshrc"
