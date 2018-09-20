@@ -27,6 +27,8 @@ numlockx on
 
 # Environment variables.
 
+BROWSER="/usr/bin/firefox"
+
 if [ $(command -v go) ]
 then
 	export GOPATH="$HOME/Projects/go"
