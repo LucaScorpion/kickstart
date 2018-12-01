@@ -1,5 +1,7 @@
 {
-	"files.trimTrailingWhitespace": true,
+    "window.titleBarStyle": "custom",
+
+    "files.trimTrailingWhitespace": true,
 
 	"css.lint.important": "warning",
 	"css.lint.float": "warning",
