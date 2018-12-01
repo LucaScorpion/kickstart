@@ -29,8 +29,7 @@ gsettings set org.gnome.nautilus.preferences default-folder-viewer list-view
 gsettings set org.gnome.nautilus.preferences search-view list-view
 
 # Gtk.
-printf "%s Gtk" "-"
+printf "%s Gtk\n" "-"
 gsettings set org.gtk.Settings.FileChooser sort-directories-first true
 gsettings set org.gtk.Settings.FileChooser show-hidden true
 
-printf "\n"
