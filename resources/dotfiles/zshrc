@@ -6,32 +6,25 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load. (~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/)
 ZSH_THEME="spaceship"
 
-# Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
-plugins=(
-	thefuck
-	git
-	sudo
-	mvn
-	web-search
-)
-
 # Theme configuration.
-
 SPACESHIP_EXIT_CODE_SHOW=true
 SPACESHIP_EXIT_CODE_SYMBOL=
 
+# Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
+plugins=(
+	sudo
+	thefuck
+)
+
 # User configuration.
-
 source "$ZSH/oh-my-zsh.sh"
-numlockx on
-
-# Environment variables.
-
-BROWSER="/usr/bin/firefox"
+source ~/.env
+source ~/.aliases
 
 # PATH variable.
 
-function addPath {
+function addPath
+{
 	export PATH="$PATH:$1"
 }
 
@@ -43,11 +36,3 @@ then
 	eval $(go env | sed "s/^/export /")
 	addPath "$GOROOT/bin:$GOPATH/bin"
 fi
-
-addPath "$HOME/.gem/ruby/2.5.0/bin"
-
-# Aliases.
-
-alias zshconfig="nano ~/.zshrc"
-alias files="xdg-open ."
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+alias ls='ls --color=auto'
+alias l='ls -lAh'
+
+alias zshconfig="$EDITOR ~/.zshrc"
+alias aliases="$EDITOR ~/.aliases"
+
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
