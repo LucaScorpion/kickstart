@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Copy all dotfiles to the home directory.
 printf "Copying dotfiles:\n"

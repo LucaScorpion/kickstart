@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Copy the user configuration.
 printf "Copying user configuration.\n"

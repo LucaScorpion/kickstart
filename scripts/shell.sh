@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Check if oh-my-zsh is already installed.
 if [ -d "$HOME/.oh-my-zsh" ]
