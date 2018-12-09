@@ -3,6 +3,8 @@
 alias ls='ls --color=auto'
 alias l='ls -lAh'
 
+alias files='xdg-open . &> /dev/null'
+
 alias zshconfig="$EDITOR ~/.zshrc"
 alias aliases="$EDITOR ~/.aliases"
 
