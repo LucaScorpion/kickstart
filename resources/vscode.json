@@ -15,5 +15,8 @@
 
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
-	"explorer.autoReveal": false
+	"explorer.autoReveal": false,
+
+	"asciidoc.preview.scrollPreviewWithEditor": false,
+	"asciidoc.preview.scrollEditorWithPreview": false
 }
