@@ -7,5 +7,6 @@ alias files='xdg-open . &> /dev/null'
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias aliases="$EDITOR ~/.aliases"
+alias gitconfig="$EDITOR ~/.gitconfig"
 
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
