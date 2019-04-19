@@ -32,7 +32,6 @@ addPath "$HOME/bin"
 
 if [ $(command -v go) ]
 then
-	export GOPATH="$HOME/Projects/go"
 	eval $(go env | sed "s/^/export /")
 	addPath "$GOROOT/bin:$GOPATH/bin"
 fi
