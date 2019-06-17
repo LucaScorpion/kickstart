@@ -1,13 +1,23 @@
 #!/bin/bash
 
+# ls
+
 alias ls='ls --color=auto'
 alias l='ls -lAh'
 
-alias files='xdg-open . &> /dev/null'
+# Config files
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias aliases="$EDITOR ~/.aliases"
 alias gitconfig="$EDITOR ~/.gitconfig"
 alias sshconfig="$EDITOR ~/.ssh/config"
 
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+# Misc
+
+alias files='xdg-open . &> /dev/null'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+# Docker
+
+alias up='docker-compose up -d'
+alias down='docker-compose down'
