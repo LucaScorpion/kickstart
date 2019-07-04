@@ -28,8 +28,6 @@ function addPath
 	export PATH="$PATH:$1"
 }
 
-addPath "$HOME/bin"
-
 if [ $(command -v go) ]
 then
 	eval $(go env | sed "s/^/export /")

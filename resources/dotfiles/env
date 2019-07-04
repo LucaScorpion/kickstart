@@ -1,4 +1,5 @@
 #!/bin/bash
 
-export EDITOR=/usr/bin/nano
-export BROWSER=/usr/bin/firefox
+export EDITOR='/usr/bin/nano'
+export BROWSER='/usr/bin/firefox'
+export PATH="$PATH:$HOME/bin:./node_modules/.bin"
