@@ -18,8 +18,11 @@ plugins=(
 	docker-compose
 )
 
-# User configuration.
+# Load Oh My Zsh, reload autocompletion.
 source "$ZSH/oh-my-zsh.sh"
+autoload -U compinit && compinit
+
+# User configuration.
 source ~/.env
 source ~/.aliases
 

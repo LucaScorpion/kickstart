@@ -1,6 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
+# Check if Zsh is installed.
+if [ ! $(command -v zsh) ]
+then
+	printf "Z shell is not installed, skipping.\n"
+	exit
+fi
+
 # Check if oh-my-zsh is already installed.
 if [ -d "$HOME/.oh-my-zsh" ]
 then
@@ -8,7 +15,8 @@ then
 else
 	# Install Oh My Zsh.
 	printf "Installing Oh My Zsh.\n"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+	chsh -s $(which zsh)
 fi
 
 # Check if the custom themes dir exists.
