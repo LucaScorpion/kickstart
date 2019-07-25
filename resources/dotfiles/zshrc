@@ -12,8 +12,8 @@ SPACESHIP_EXIT_CODE_SYMBOL=
 
 # Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
 plugins=(
-	sudo
 	thefuck
+	sudo # Load sudo after thefuck, so it binds to the double-esc keybinding (which thefuck also does).
 	docker
 	docker-compose
 )
