@@ -3,3 +3,5 @@
 export EDITOR='/usr/bin/nano'
 export BROWSER='/usr/bin/firefox'
 export PATH="$PATH:$HOME/bin:./node_modules/.bin"
+
+unset MAIL
