@@ -16,6 +16,7 @@ alias sshconfig="$EDITOR ~/.ssh/config"
 
 alias files='xdg-open . &> /dev/null'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias newtab='gnome-terminal -q --tab'
 
 # Docker
 
