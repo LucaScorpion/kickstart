@@ -15,7 +15,7 @@ then
 else
 	# Install Oh My Zsh.
 	printf "Installing Oh My Zsh.\n"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 	printf "Changing shell to zsh.\n"
 	chsh -s $(which zsh)
 fi

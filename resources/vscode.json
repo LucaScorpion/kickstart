@@ -3,14 +3,9 @@
 
     "files.trimTrailingWhitespace": true,
 
-	"css.lint.important": "warning",
-	"css.lint.float": "warning",
-
-	"html.suggest.angular1": false,
-	"html.suggest.ionic": false,
-
 	"telemetry.enableTelemetry": false,
 
+	"markdown.preview.scrollPreviewWithEditor": false,
 	"markdown.preview.scrollEditorWithPreview": false,
 
 	"explorer.confirmDelete": false,

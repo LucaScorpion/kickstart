@@ -8,5 +8,6 @@ do
     [ -f "$file" ] || continue
     name=".$(basename "$file")"
     printf "%s $name\n" "-"
+    [ -f "$HOME/$name" ] && cp -f "$HOME/$name" "$HOME/$name.bak"
     cp -f "$file" "$HOME/$name"
 done

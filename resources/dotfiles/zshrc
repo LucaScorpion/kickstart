@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Options
+setopt nobeep
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -18,9 +21,14 @@ plugins=(
 	docker-compose
 )
 
-# Load Oh My Zsh, reload autocompletion.
+# Load Oh My Zsh.
 source "$ZSH/oh-my-zsh.sh"
-autoload -U compinit && compinit
+
+# Load autocompletion and syntax highlighting
+autoload -U compinit colors
+compinit
+colors
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration.
 source ~/.env
