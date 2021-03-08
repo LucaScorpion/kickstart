@@ -5,3 +5,5 @@
 [user]
 	name = Luca Scalzotto
 	email = luca@scorpiac.com
+[pull]
+	rebase = false

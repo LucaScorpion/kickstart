@@ -46,3 +46,8 @@ then
 	eval $(go env | sed "s/^/export /")
 	addPath "$GOROOT/bin:$GOPATH/bin"
 fi
+
+if [ -d "$HOME/.local/share/gem/ruby/2.7.0/bin" ]
+then
+	addPath "$HOME/.local/share/gem/ruby/2.7.0/bin"
+fi
