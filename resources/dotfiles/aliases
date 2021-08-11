@@ -24,3 +24,4 @@ alias newtab='gnome-terminal -q --tab'
 
 alias up='docker-compose up -d'
 alias down='docker-compose down'
+alias stop='docker-compose stop'
