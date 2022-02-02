@@ -7,8 +7,9 @@ alias l='ls -lAh'
 
 # Config files
 
-alias zshconfig="$EDITOR ~/.zshrc"
 alias aliases="$EDITOR ~/.aliases"
+alias envconfig="$EDITOR ~/.env"
+alias zshconfig="$EDITOR ~/.zshrc"
 alias gitconfig="$EDITOR ~/.gitconfig"
 alias sshconfig="$EDITOR ~/.ssh/config"
 alias npmconfig="$EDITOR ~/.npmrc"
