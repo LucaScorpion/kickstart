@@ -25,8 +25,8 @@ fi
 printHelp()
 {
 	printf "\
-Antergos Kickstart
-https://github.com/LucaScorpion/antergos-kickstart
+Kickstart
+https://github.com/LucaScorpion/kickstart
 
 Usage: ./kickstart.sh
 Options:
