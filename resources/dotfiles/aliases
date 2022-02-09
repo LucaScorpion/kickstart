@@ -26,3 +26,12 @@ alias newtab='gnome-terminal -q --tab'
 alias up='docker-compose up -d'
 alias down='docker-compose down'
 alias stop='docker-compose stop'
+
+# Git
+
+alias gaa='git add -A'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gs='git status'
