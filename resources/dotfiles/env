@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nano'
