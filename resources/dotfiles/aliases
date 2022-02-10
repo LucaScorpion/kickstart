@@ -31,6 +31,7 @@ alias stop='docker-compose stop'
 
 alias ga='git add'
 alias gaa='git add -A'
+alias gb='git branch'
 alias gbd='git branch -d'
 alias gbdd='git branch -D'
 alias gc='git commit'
