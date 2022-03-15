@@ -5,6 +5,10 @@
 alias ls='ls --color=auto'
 alias l='ls -lAh'
 
+# xclip
+
+alias xclip='xclip -selection clipboard'
+
 # Config files
 
 alias aliases="$EDITOR ~/.aliases"
