@@ -2,8 +2,10 @@
     "window.titleBarStyle": "custom",
 
     "files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
 
-	"telemetry.enableTelemetry": false,
+	"telemetry.telemetryLevel": "crash",
 
 	"markdown.preview.scrollPreviewWithEditor": false,
 	"markdown.preview.scrollEditorWithPreview": false,
@@ -13,5 +15,7 @@
 	"explorer.autoReveal": false,
 
 	"asciidoc.preview.scrollPreviewWithEditor": false,
-	"asciidoc.preview.scrollEditorWithPreview": false
+	"asciidoc.preview.scrollEditorWithPreview": false,
+
+	"window.restoreWindows": "none"
 }
