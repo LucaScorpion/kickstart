@@ -7,6 +7,8 @@
 	email = luca@scorpiac.com
 [pull]
 	rebase = false
+[push]
+	autoSetupRemote = true
 [init]
 	defaultBranch = main
 [alias]
