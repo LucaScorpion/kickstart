@@ -32,7 +32,7 @@ spaceshipDir="$themesDir/spaceship-prompt"
 if [ ! -d "$spaceshipDir" ]
 then
 	printf "Downloading Spaceship theme.\n"
-	git clone https://github.com/denysdovhan/spaceship-prompt.git "$spaceshipDir"
+	git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$spaceshipDir" --depth=1
 	ln -s "$spaceshipDir/spaceship.zsh-theme" "$themesDir/spaceship.zsh-theme"
 else
 	printf "Updating Spaceship theme.\n"
