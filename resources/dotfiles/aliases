@@ -27,9 +27,11 @@ alias newtab='gnome-terminal -q --tab'
 
 # Docker
 
-alias up='docker-compose up -d'
 alias down='docker-compose down'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
 alias stop='docker-compose stop'
+alias up='docker-compose up -d'
 
 # Git
 
