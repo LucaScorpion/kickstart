@@ -25,11 +25,14 @@ plugins=(
 # Load Oh My Zsh.
 source "$ZSH/oh-my-zsh.sh"
 
-# Load autocompletion and syntax highlighting
-autoload -U compinit colors
+# Load autocompletion and syntax highlighting.
+autoload -Uz compinit colors
 compinit
 colors
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autocompletion for specific folders.
+zstyle -e ':completion:*' command-path 'reply=( "$PWD/.bin-luca" "$path[@]" )'
 
 # User configuration.
 source ~/.env
