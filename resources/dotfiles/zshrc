@@ -7,12 +7,7 @@ setopt nobeep
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. (~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/)
-ZSH_THEME="spaceship"
-
-# Theme configuration.
-SPACESHIP_EXIT_CODE_SHOW=true
-SPACESHIP_EXIT_CODE_SYMBOL=
-SPACESHIP_PROMPT_ASYNC=false
+ZSH_THEME="gokart"
 
 # Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
 plugins=(

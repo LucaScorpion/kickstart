@@ -4,7 +4,7 @@ set -euo pipefail
 # Check if Zsh is installed.
 if [ ! $(command -v zsh) ]
 then
-	printf "Z shell is not installed, skipping.\n"
+	printf "Zsh is not installed, skipping.\n"
 	exit
 fi
 
@@ -27,14 +27,6 @@ then
 	mkdir -p "$themesDir"
 fi
 
-# Download or update the Spaceship theme.
-spaceshipDir="$themesDir/spaceship-prompt"
-if [ ! -d "$spaceshipDir" ]
-then
-	printf "Downloading Spaceship theme.\n"
-	git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$spaceshipDir" --depth=1
-	ln -s "$spaceshipDir/spaceship.zsh-theme" "$themesDir/spaceship.zsh-theme"
-else
-	printf "Updating Spaceship theme.\n"
-	git -C "$spaceshipDir" pull
-fi
+# Download or update the Gokart theme.
+printf "Downloading Gokart theme.\n"
+curl -fsSL https://github.com/LucaScorpion/gokart-prompt/releases/latest/download/gokart-prompt.tar.gz | tar xzf - -C "$themesDir"
