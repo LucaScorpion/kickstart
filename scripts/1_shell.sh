@@ -4,19 +4,19 @@ set -euo pipefail
 # Check if Zsh is installed.
 if [ ! $(command -v zsh) ]
 then
-	printf "Zsh is not installed, skipping.\n"
+	echo 'Zsh is not installed, skipping.'
 	exit
 fi
 
 # Check if oh-my-zsh is already installed.
 if [ -d "$HOME/.oh-my-zsh" ]
 then
-	printf "Oh My Zsh is already installed, skipping.\n"
+	echo 'Oh My Zsh is already installed, skipping.'
 else
 	# Install Oh My Zsh.
-	printf "Installing Oh My Zsh.\n"
+	echo 'Installing Oh My Zsh.'
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-	printf "Changing shell to zsh.\n"
+	echo 'Changing shell to zsh.'
 	chsh -s $(which zsh)
 fi
 
@@ -28,5 +28,5 @@ then
 fi
 
 # Download or update the Gokart theme.
-printf "Downloading Gokart theme.\n"
+echo 'Downloading Gokart theme.'
 curl -fsSL https://github.com/LucaScorpion/gokart-prompt/releases/latest/download/gokart-prompt.tar.gz | tar xzf - -C "$themesDir"

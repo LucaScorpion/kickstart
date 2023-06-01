@@ -10,28 +10,28 @@ green=$(tput setaf 2)
 # Check if sudo is installed.
 if [ ! $(command -v sudo) ]
 then
-	printf "${red}These scripts require the sudo package to be installed.${normal}\n"
+	echo "${red}These scripts require the sudo package to be installed.${normal}"
 	exit 1
 fi
 
 # Check if we are running as root.
 if (( "$EUID" == 0 ))
 then
-	printf "${red}This script should not be executed as root. Where necessary, sudo will be used.${normal}\n"
+	echo "${red}This script should not be executed as root. Where necessary, sudo will be used.${normal}"
 	exit 2
 fi
 
 # Print the usage text.
 printHelp()
 {
-	printf "\
+	echo '
 Kickstart
 https://github.com/LucaScorpion/kickstart
 
 Usage: ./kickstart.sh
 Options:
 -h, --help    View this help text
-"
+'
 }
 
 # Parse options.
@@ -45,7 +45,7 @@ do
 			;;
 		# Invalid options.
 		*)
-			printf "${red}Invalid option: $1${normal}\n"
+			echo "${red}Invalid option: $1${normal}"
 			printHelp
 			exit 3
 	esac
@@ -60,10 +60,10 @@ export RESOURCES="$baseDir/resources"
 for file in "$baseDir/scripts/"*
 do
 	[ -x "$file" ] || continue
-	printf "${blue}= $(basename "$file")$normal\n"
+	echo "${blue}= $(basename "$file")$normal"
 	"$file"
-	printf "\n"
+	echo
 done
 
 # That's all folks!
-printf "${green}Done!${normal}\n"
+echo "${green}Done!${normal}"

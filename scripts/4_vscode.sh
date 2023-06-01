@@ -2,11 +2,11 @@
 set -euo pipefail
 
 # Copy the user configuration.
-printf "Copying user configuration.\n"
+echo 'Copying user configuration.'
 userConfig="$HOME/.config/Code - OSS/User"
 if [ -d "$userConfig" ]
 then
 	cp "$RESOURCES/vscode.json" "$userConfig/settings.json"
 else
-	printf 'Could not find Code settings directory, skipping...\n'
+	echo 'Could not find Code settings directory, skipping...'
 fi

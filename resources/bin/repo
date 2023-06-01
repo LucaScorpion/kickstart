@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -eu
+
+# Example remote:
+# origin  git@gitlab.com:path/to/repo.git (fetch)
+
+# Step by step:
+# Only get the first line from the remotes.
+# Remove everything up to the '@'.
+# Remove everything from the '.git' url suffix.
+# Replace the ':' with a '/'.
+remoteUrl=$(git remote -v \
+    | head -n 1 \
+    | sed 's/.*@//' \
+    | sed 's/\.git.*//' \
+    | sed 's/:/\//' \
+)
+remoteUrl="https://$remoteUrl"
+
+"$BROWSER" "$remoteUrl"

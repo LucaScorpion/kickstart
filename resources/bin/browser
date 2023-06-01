@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -eu
+
+# Check if stdin is a terminal.
+if [ -t 0 ]
+then
+    cat <<EOF
+Usage: browser
+       pipe html to a browser
+
+$ echo '<h1>Hello world</h1>' | browser
+EOF
+else
+    f="/tmp/browser.$RANDOM.html"
+    cat /dev/stdin > "$f"
+    "$BROWSER" "$f"
+fi
