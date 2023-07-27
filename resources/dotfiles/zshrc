@@ -25,12 +25,28 @@ compinit
 colors
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Autocompletion for specific folders.
-zstyle -e ':completion:*' command-path 'reply=( "$PWD/.bin-luca" "$path[@]" )'
-
 # User configuration.
 source ~/.env
 source ~/.aliases
+
+# SSH agent setup.
+# Based on: https://stackoverflow.com/a/18915067
+
+SSH_ENV="$HOME/.ssh/agent_env"
+
+function startSshAgent
+{
+	ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+	source "${SSH_ENV}"
+}
+
+if [ -f "${SSH_ENV}" ]
+then
+	source "${SSH_ENV}"
+	ps "$SSH_AGENT_PID" > /dev/null || startSshAgent
+else
+	startSshAgent
+fi
 
 # NVM
 if [ -f '/usr/share/nvm/init-nvm.sh' ]

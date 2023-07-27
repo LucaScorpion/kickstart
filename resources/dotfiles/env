@@ -3,5 +3,4 @@
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nano'
 export BROWSER='/usr/bin/firefox'
-export PATH="$PATH:$HOME/bin:./node_modules/.bin:./vendor/bin:./.bin-luca"
-export THEFUCK_EXCLUDE_RULES='fix_file'
+export PATH="$PATH:$HOME/bin:./node_modules/.bin:./vendor/bin"
