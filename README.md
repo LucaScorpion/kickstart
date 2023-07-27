@@ -2,6 +2,14 @@
 
 A collection of scripts that will kickstart a fresh Linux installation.
 
+## Before Starting
+
+On Arch-based distro's, you will need the `base-devel` package:
+
+```shell
+sudo pacman -S base-devel
+```
+
 ## Running the Scripts
 
 To execute all scripts, simply run `kickstart.sh`.

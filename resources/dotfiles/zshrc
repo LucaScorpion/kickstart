@@ -11,8 +11,7 @@ ZSH_THEME="gokart"
 
 # Set the plugins to load. (~/.oh-my-zsh/plugins/ and ~/.oh-my-zsh/custom/plugins/)
 plugins=(
-	thefuck
-	sudo # Load sudo after thefuck, so it binds to the double-esc keybinding (which thefuck also does).
+	sudo
 	docker
 	docker-compose
 )

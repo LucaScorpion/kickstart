@@ -30,3 +30,8 @@ fi
 # Download or update the Gokart theme.
 echo 'Downloading Gokart theme.'
 curl -fsSL https://github.com/LucaScorpion/gokart-prompt/releases/latest/download/gokart-prompt.tar.gz | tar xzf - -C "$themesDir"
+
+if [ ! -f "$themesDir/gokart.zsh-theme" ]
+then
+	ln -s "$themesDir/gokart-prompt/gokart.zsh-theme" "$themesDir/gokart.zsh-theme"
+fi
