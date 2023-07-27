@@ -20,8 +20,10 @@ alias npmconfig="$EDITOR ~/.npmrc"
 
 # Misc
 
-alias files='xdg-open . &> /dev/null'
-alias newtab='gnome-terminal -q --tab'
+function files {
+    xdg-open "${1:-.}" &> /dev/null
+}
+
 # update-grub is already a command on some distros
 [ $(command -v update-grub) ] || alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
