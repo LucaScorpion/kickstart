@@ -11,7 +11,7 @@ fi
 # Check if oh-my-zsh is already installed.
 if [ -d "$HOME/.oh-my-zsh" ]
 then
-	echo 'Oh My Zsh is already installed, skipping.'
+	echo 'Oh My Zsh is already installed.'
 else
 	# Install Oh My Zsh.
 	echo 'Installing Oh My Zsh.'
@@ -37,5 +37,5 @@ then
 fi
 
 # Update the Konsole profile.
-echo 'Copying Konsole profile'
+echo 'Copying Konsole profile.'
 cp "$RESOURCES/konsole.profile" "$HOME/.local/share/konsole/konsole.profile"

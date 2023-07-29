@@ -2,14 +2,6 @@
 
 A collection of scripts that will kickstart a fresh Linux installation.
 
-## Before Starting
-
-On Arch-based distro's, you will need to install a couple of packages:
-
-```shell
-sudo pacman -S base-devel xclip noto-fonts-emoji
-```
-
 ## Running the Scripts
 
 To execute all scripts, simply run `kickstart.sh`.
@@ -20,9 +12,11 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 
 | Script | Description |
 | ------ | ----------- |
-| `1_shell.sh` | Install Oh My Zsh and the Spaceship theme.
-| `2_dotfiles.sh` | Update dotfiles in the user home directory.
-| `3_vscode.sh` | Set the Visual Studio Code user configuration.
+| `1_packages.sh` | Install some basic required packages.
+| `2_shell.sh` | Install Oh My Zsh and set up the theme and profile.
+| `3_dotfiles.sh` | Update dotfiles in the user home directory.
+| `4_bin` | Copy scripts to `~/bin`.
+| `5_vscode.sh` | Set the Visual Studio Code user configuration.
 
 ## Other Info
 

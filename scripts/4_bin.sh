@@ -9,6 +9,6 @@ for file in "$RESOURCES/bin/"*
 do
     [ -f "$file" ] || continue
     name="$(basename "$file")"
-    printf "%s $name\n" "-"
+    echo "- $name"
     cp -f "$file" "$HOME/bin/$name"
 done
