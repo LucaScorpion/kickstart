@@ -3,8 +3,10 @@ set -euo pipefail
 
 packages=(
     base-devel
+    chromium
     noto-fonts-emoji
     xclip
+    yay
     zsh
 )
 

@@ -31,3 +31,7 @@ load-module module-suspend-on-idle
 ```
 
 In the audio playback settings, make sure the output mode is set to "Direct".
+
+### Faillock
+
+Faillock configuration can be found in: `/etc/security/faillock.conf`.
