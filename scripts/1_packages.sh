@@ -4,7 +4,9 @@ set -euo pipefail
 packages=(
     base-devel
     chromium
+    go
     noto-fonts-emoji
+    nvm
     xclip
     yay
     zsh
