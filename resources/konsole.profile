@@ -1,7 +1,7 @@
 [Appearance]
 ColorScheme=Breeze
 EmojiFont=Noto Color Emoji,12,-1,5,50,0,0,0,0,0
-Font=DejaVu Sans Mono,10,-1,5,50,0,0,0,0,0
+Font=DejaVu Sans Mono,11,-1,5,50,0,0,0,0,0
 LineSpacing=0
 UseFontLineChararacters=false
 WordModeAscii=true
