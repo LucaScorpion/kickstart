@@ -12,7 +12,7 @@ function startSshAgent
 if [ -f "${SSH_ENV}" ]
 then
 	source "${SSH_ENV}"
-	ps "$SSH_AGENT_PID" > /dev/null || startSshAgent
+	ps "$SSH_AGENT_PID" | grep 'ssh-agent' > /dev/null || startSshAgent
 else
 	startSshAgent
 fi
