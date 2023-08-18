@@ -35,3 +35,23 @@ In the audio playback settings, make sure the output mode is set to "Direct".
 ### Faillock
 
 Faillock configuration can be found in: `/etc/security/faillock.conf`.
+
+### Fingerprint
+
+To enable fingerprint scanning, install the `fprintd` package.
+To use it for `sudo`, add the following line to `/etc/pam.d/sudo`:
+
+```
+auth            sufficient      pam_fprintd.so
+```
+
+The complete file should look like this:
+
+```
+#%PAM-1.0
+auth            sufficient      pam_fprintd.so
+
+auth            include         system-auth
+account         include         system-auth
+session         include         system-auth
+```
