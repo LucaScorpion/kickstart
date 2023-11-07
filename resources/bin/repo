@@ -17,4 +17,4 @@ remoteUrl=$(git remote -v \
 )
 remoteUrl="https://$remoteUrl"
 
-"$BROWSER" "$remoteUrl"
+"$BROWSER" "$remoteUrl" &
