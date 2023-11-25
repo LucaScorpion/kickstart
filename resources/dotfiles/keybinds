@@ -14,3 +14,6 @@ function run-explain() {
 # Create a widget for the run-explain function with the same name.
 zle -N run-explain{,}
 bindkey '^[OQ' run-explain
+
+# ctrl+backspace: backward-delete-word
+bindkey '^H' backward-delete-word
