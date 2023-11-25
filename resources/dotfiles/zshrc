@@ -28,23 +28,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # User configuration.
 source ~/.env
 source ~/.aliases
-
-# Keybinds
-
-# For more ZLE docs, see: https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html
-
-# Bind F1 to run-help (man).
-bindkey '^[OP' run-help
-
-function run-explain() {
-        echo
-        explain "$BUFFER"
-        zle redisplay
-}
-# Create a widget for the run-explain function with the same name.
-zle -N run-explain{,}
-# Bind F2 to run-explain.
-bindkey '^[OQ' run-explain
+source ~/.keybinds
 
 # NVM
 if [ -f '/usr/share/nvm/init-nvm.sh' ]

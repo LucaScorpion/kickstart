@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# ZLE docs: https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html
+
+# F1: run-help (man)
+bindkey '^[OP' run-help
+
+# F2: run-explain
+function run-explain() {
+        echo
+        explain "$BUFFER"
+        zle redisplay
+}
+# Create a widget for the run-explain function with the same name.
+zle -N run-explain{,}
+bindkey '^[OQ' run-explain
