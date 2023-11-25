@@ -11,17 +11,25 @@ bindkey '^[OP' run-help
 
 # F2
 function run-explain() {
-    echo
-    explain "$BUFFER"
-    zle redisplay
+    if [ -n "$BUFFER" ]
+    then
+        echo
+        explain "$BUFFER"
+        zle redisplay
+    fi
 }
 zle -N run-explain{,}
 bindkey '^[OQ' run-explain
 
 # F3
 function run-tldr() {
-    tldr "$(echo "$BUFFER" | head -n1 | awk '{print $1;}')"
-    zle redisplay
+    local cmd
+    cmd="$(echo "$BUFFER" | head -n1 | awk '{print $1;}')"
+    if [ -n "$cmd" ]
+    then
+        tldr "$cmd"
+        zle redisplay
+    fi
 }
 zle -N run-tldr{,}
 bindkey '^[OR' run-tldr
