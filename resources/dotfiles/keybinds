@@ -13,9 +13,8 @@ bindkey '^[OP' run-help
 function run-explain() {
     if [ -n "$BUFFER" ]
     then
-        echo
+        zle -I
         explain "$BUFFER"
-        zle redisplay
     fi
 }
 zle -N run-explain{,}
@@ -27,8 +26,8 @@ function run-tldr() {
     cmd="$(echo "$BUFFER" | head -n1 | awk '{print $1;}')"
     if [ -n "$cmd" ]
     then
+        zle -I
         tldr "$cmd"
-        zle redisplay
     fi
 }
 zle -N run-tldr{,}
