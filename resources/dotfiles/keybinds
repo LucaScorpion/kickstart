@@ -2,18 +2,29 @@
 
 # ZLE docs: https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html
 
-# F1: run-help (man)
+# To create a widget from a function:
+# zle -N function-name{,}
+# This creates a ZLE widget with the same name as the function.
+
+# F1
 bindkey '^[OP' run-help
 
-# F2: run-explain
+# F2
 function run-explain() {
-        echo
-        explain "$BUFFER"
-        zle redisplay
+    echo
+    explain "$BUFFER"
+    zle redisplay
 }
-# Create a widget for the run-explain function with the same name.
 zle -N run-explain{,}
 bindkey '^[OQ' run-explain
 
-# ctrl+backspace: backward-delete-word
+# F3
+function run-tldr() {
+    tldr "$(echo "$BUFFER" | head -n1 | awk '{print $1;}')"
+    zle redisplay
+}
+zle -N run-tldr{,}
+bindkey '^[OR' run-tldr
+
+# ctrl+backspace
 bindkey '^H' backward-delete-word
