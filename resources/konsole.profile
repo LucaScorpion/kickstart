@@ -20,6 +20,7 @@ TerminalMargin=2
 [Scrolling]
 HighlightScrolledLines=false
 HistoryMode=1
+HistorySize=10000
 
 [Terminal Features]
 BellMode=3
