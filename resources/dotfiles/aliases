@@ -29,11 +29,17 @@ function files {
 
 # Docker
 
-alias down='docker-compose down'
+alias db='docker build'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
-alias stop='docker-compose stop'
-alias up='docker-compose up -d'
+
+# Docker compose
+
+alias dc='docker compose'
+alias dcb='docker compose build'
+alias down='docker compose down'
+alias stop='docker compose stop'
+alias up='docker compose up -d'
 
 # Git
 
