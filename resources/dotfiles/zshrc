@@ -35,21 +35,3 @@ if [ -f '/usr/share/nvm/init-nvm.sh' ]
 then
 	source '/usr/share/nvm/init-nvm.sh'
 fi
-
-# PATH variable.
-
-function addPath
-{
-	export PATH="$PATH:$1"
-}
-
-if [ $(command -v go) ]
-then
-	eval $(go env | sed "s/^/export /")
-	addPath "$GOROOT/bin:$GOPATH/bin"
-fi
-
-if [ -d "$HOME/.local/share/gem/ruby/2.7.0/bin" ]
-then
-	addPath "$HOME/.local/share/gem/ruby/2.7.0/bin"
-fi

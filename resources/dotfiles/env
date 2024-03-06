@@ -3,4 +3,23 @@
 export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nano'
 export BROWSER='/usr/bin/firefox'
-export PATH="$PATH:$HOME/bin:./node_modules/.bin:./vendor/bin"
+
+function addPath
+{
+	export PATH="$PATH:$1"
+}
+
+addPath "$HOME/bin"
+addPath './node_modules/.bin'
+addPath './vendor/bin'
+
+if [ $(command -v go) ]
+then
+	eval $(go env | sed "s/^/export /")
+	addPath "$GOROOT/bin:$GOPATH/bin"
+fi
+
+if [ -d "$HOME/.local/share/gem/ruby/2.7.0/bin" ]
+then
+	addPath "$HOME/.local/share/gem/ruby/2.7.0/bin"
+fi
