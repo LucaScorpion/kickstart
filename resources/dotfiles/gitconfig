@@ -4,7 +4,7 @@
 #	gpgsign = true
 [user]
 	name = Luca Scalzotto
-	email = luca@scorpiac.com
+	email = luca@scalzotto.nl
 [pull]
 	rebase = false
 [push]
