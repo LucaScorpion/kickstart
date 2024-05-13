@@ -35,7 +35,3 @@ if [ ! -f "$themesDir/gokart.zsh-theme" ]
 then
 	ln -s "$themesDir/gokart-prompt/gokart.zsh-theme" "$themesDir/gokart.zsh-theme"
 fi
-
-# Update the Konsole profile.
-echo 'Copying Konsole profile.'
-cp "$RESOURCES/konsole.profile" "$HOME/.local/share/konsole/konsole.profile"

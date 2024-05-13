@@ -6,10 +6,10 @@ packages=(
     chromium
     go
     noto-fonts-emoji
-    nvm
     xclip
     yay
     zsh
+    zsh-syntax-highlighting
 )
 
 echo 'Checking or installing packages:'
