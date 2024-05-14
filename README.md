@@ -22,6 +22,18 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 
 The info here may differ depending on the specific distro or window manager.
 
+### SSH agent
+
+The Gnome keyring SSH functionality is disabled by default.
+To enable it, run:
+
+```shell
+systemctl --user enable gcr-ssh-agent.socket
+systemctl --user start gcr-ssh-agent.socket
+```
+
+See: https://wiki.archlinux.org/title/GNOME/Keyring#SSH_keys
+
 ### Gnome extensions
 
 Some recommended Gnome extensions:
