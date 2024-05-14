@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# To update a dump: `dconf dump [path]`
-
 echo 'Loading dconf dumps:'
 for file in "$RESOURCES/dconf/"*
 do
