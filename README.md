@@ -13,12 +13,23 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | Script | Description |
 | ------ | ----------- |
 | `1_packages.sh` | Install some basic required packages.
-| `2_shell.sh` | Install Oh My Zsh and set up the theme and profile.
+| `2_shell.sh` | Install Oh My Zsh and set up the theme.
 | `3_dotfiles.sh` | Update dotfiles in the user home directory.
 | `4_bin` | Copy scripts to `~/bin`.
 | `5_vscode.sh` | Set the Visual Studio Code user configuration.
 
 ## Other Info
+
+The info here may differ depending on the specific distro or window manager.
+
+### Gnome extensions
+
+Some recommended Gnome extensions:
+
+- [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support)
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock)
+- [Steal my focus window](https://extensions.gnome.org/extension/6385/steal-my-focus-window)
+- [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu)
 
 ### USB Sound Cards
 

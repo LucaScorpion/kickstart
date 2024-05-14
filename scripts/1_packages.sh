@@ -4,6 +4,7 @@ set -euo pipefail
 packages=(
     base-devel
     chromium
+    gnome-browser-connector
     go
     noto-fonts-emoji
     xclip
