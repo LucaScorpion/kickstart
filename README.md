@@ -17,6 +17,7 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | `3_dotfiles.sh` | Update dotfiles in the user home directory.
 | `4_bin` | Copy scripts to `~/bin`.
 | `5_vscode.sh` | Set the Visual Studio Code user configuration.
+| `6_dconf.sh` | Import dconf settings.
 
 ## Other Info
 
