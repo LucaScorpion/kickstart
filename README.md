@@ -43,6 +43,7 @@ Some recommended Gnome extensions:
 - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock)
 - [Steal my focus window](https://extensions.gnome.org/extension/6385/steal-my-focus-window)
 - [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu)
+- [Emoji Copy](https://extensions.gnome.org/extension/6242/emoji-copy)
 
 ### USB Sound Cards
 
