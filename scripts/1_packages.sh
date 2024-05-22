@@ -6,6 +6,7 @@ packages=(
     chromium
     gnome-browser-connector
     go
+    jq
     noto-fonts-emoji
     xclip
     yay
