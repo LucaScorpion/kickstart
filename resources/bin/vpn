@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+vpnDir="$HOME/Documents/vpn"
+
+ovpnFile="$vpnDir/$1.ovpn"
+passFile="$vpnDir/$1_pass.txt"
+
+vpnCommand="sudo openvpn --config $ovpnFile"
+
+if [ -f "$passFile" ]
+then
+    vpnCommand="$vpnCommand --auth-user-pass $passFile"
+fi
+
+$vpnCommand
