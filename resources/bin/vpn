@@ -3,11 +3,36 @@ set -euo pipefail
 
 vpnDir="$HOME/Documents/vpn"
 
+# If no argument is given, list the VPN configs.
+if [ -z ${1+x} ]
+then
+    echo 'Available VPN files:'
+
+    for file in "$vpnDir/"*".ovpn"
+    do
+        [ -f "$file" ] || continue
+
+        # Get the filename without extension.
+        name="$(basename "$file")"
+        echo "- ${name%.*}"
+    done
+
+    exit
+fi
+
 ovpnFile="$vpnDir/$1.ovpn"
 passFile="$vpnDir/$1_pass.txt"
 
+# Check if a name is given.
+if [ ! -f "$ovpnFile" ]
+then
+    echo "No VPN file found for '$1'"
+    exit 1
+fi
+
 vpnCommand="sudo openvpn --config $ovpnFile"
 
+# Check if a pass file exists, if so, add a flag to the command.
 if [ -f "$passFile" ]
 then
     vpnCommand="$vpnCommand --auth-user-pass $passFile"
