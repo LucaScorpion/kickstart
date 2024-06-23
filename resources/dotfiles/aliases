@@ -17,6 +17,7 @@ alias zshconfig="$EDITOR ~/.zshrc"
 alias gitconfig="$EDITOR ~/.gitconfig"
 alias sshconfig="$EDITOR ~/.ssh/config"
 alias npmconfig="$EDITOR ~/.npmrc"
+alias grubconfig="sudo $EDITOR /etc/default/grub"
 
 # Misc
 
