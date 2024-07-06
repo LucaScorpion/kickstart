@@ -1,0 +1,4 @@
+[/]
+attach-modal-dialogs=false
+dynamic-workspaces=false
+experimental-features=['scale-monitor-framebuffer']
