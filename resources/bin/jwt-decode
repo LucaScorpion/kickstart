@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+function printJwt {
+    # Split the line on '.'.
+    IFS='.' read -a PARTS <<< "$1"
+
+    echo 'Header:'
+    echo "${PARTS[0]}" | base64 -d | jq
+    echo 'Payload:'
+    echo "${PARTS[1]}" | base64 -d | jq
+}
+
+# If an argument is given, read that. Otherwise, read stdin.
+if [ -z ${1+x} ]
+then
+    while read line
+    do
+        printJwt "$line"
+    done < '/dev/stdin'
+else
+    printJwt "$1"
+fi
