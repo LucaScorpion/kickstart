@@ -4,6 +4,7 @@ set -euo pipefail
 packages=(
     base-devel
     chromium
+    dconf-editor
     gnome-browser-connector
     go
     jq
@@ -22,6 +23,6 @@ do
     if [ ! "$(pacman -Q "$package" 2> /dev/null)" ]
     then
         echo "Installing $package"
-        sudo pacman -S "$package"
+        sudo pacman -S --noconfirm "$package"
     fi
 done
