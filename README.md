@@ -35,6 +35,14 @@ systemctl --user start gcr-ssh-agent.socket
 
 See: https://wiki.archlinux.org/title/GNOME/Keyring#SSH_keys
 
+### Bluetooth
+
+You may have to enable the bluetooth service:
+
+```shell
+sudo systemctl enable bluetooth
+```
+
 ### Gnome extensions
 
 Some recommended Gnome extensions:
