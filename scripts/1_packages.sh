@@ -6,6 +6,7 @@ packages=(
     chromium
     dconf-editor
     gnome-browser-connector
+    gnome-font-viewer
     go
     jq
     noto-fonts-emoji
