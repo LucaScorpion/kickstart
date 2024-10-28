@@ -15,7 +15,7 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | `1_packages.sh` | Install some basic required packages.
 | `2_shell.sh` | Install Oh My Zsh and set up the theme.
 | `3_dotfiles.sh` | Update dotfiles in the user home directory.
-| `4_bin` | Copy scripts to `~/bin`.
+| `4_bin` | Install the [cli-toolkit](https://github.com/LucaScorpion/cli-toolkit).
 | `5_vscode.sh` | Set the Visual Studio Code user configuration.
 | `6_dconf.sh` | Import dconf settings. These dumps can be created using [dconf-dump.sh](./dconf-dump.sh).
 

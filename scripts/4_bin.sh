@@ -3,12 +3,13 @@ set -euo pipefail
 
 mkdir -p "$HOME/bin"
 
-# Copy all bin scripts to ~/bin.
-echo 'Copying bin scripts:'
-for file in "$RESOURCES/bin/"*
-do
-    [ -f "$file" ] || continue
-    name="$(basename "$file")"
-    echo "- $name"
-    cp -f "$file" "$HOME/bin/$name"
-done
+if [ -d "$HOME/bin/cli-toolkit" ]
+then
+    # Update.
+    echo 'Updating CLI toolkit'
+    git -C "$HOME/bin/cli-toolkit" pull
+else
+    # Install.
+    echo 'Installing CLI toolkit.'
+    git clone git@github.com:LucaScorpion/cli-toolkit.git "$HOME/bin/cli-toolkit"
+fi
