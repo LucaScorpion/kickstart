@@ -21,6 +21,8 @@ alias grubconfig="sudo $EDITOR /etc/default/grub"
 
 # Misc
 
+alias open='xdg-open'
+
 function files {
     xdg-open "${1:-.}" &> /dev/null
 }
