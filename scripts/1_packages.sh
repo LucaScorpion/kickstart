@@ -4,12 +4,15 @@ set -euo pipefail
 packages=(
     base-devel
     chromium
+    code
     dconf-editor
     gnome-browser-connector
     gnome-font-viewer
     go
     jq
     noto-fonts-emoji
+    nvm
+    php
     xclip
     yay
     zsh
