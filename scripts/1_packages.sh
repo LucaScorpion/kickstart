@@ -7,6 +7,8 @@ packages=(
     code
     composer
     dconf-editor
+    docker
+    docker-compose
     gnome-browser-connector
     gnome-font-viewer
     go

@@ -18,6 +18,7 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | `4_bin` | Install the [cli-toolkit](https://github.com/LucaScorpion/cli-toolkit).
 | `5_vscode.sh` | Set the Visual Studio Code user configuration.
 | `6_dconf.sh` | Import dconf settings. These dumps can be created using [dconf-dump.sh](./dconf-dump.sh).
+| `7_docker.sh` | Ensure the Docker service is started and enabled.
 
 ## Other Info
 
