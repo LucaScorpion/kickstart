@@ -5,6 +5,7 @@ packages=(
     base-devel
     chromium
     code
+    composer
     dconf-editor
     gnome-browser-connector
     gnome-font-viewer
