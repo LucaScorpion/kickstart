@@ -89,3 +89,13 @@ auth            include         system-auth
 account         include         system-auth
 session         include         system-auth
 ```
+
+### Dualboot with Grub
+
+Edit `/etc/default/grub`, and uncomment the line:
+
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+
+Run `update-grub` to update the boot menu.
