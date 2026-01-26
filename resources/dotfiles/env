@@ -4,6 +4,9 @@ export EDITOR='/usr/bin/nano'
 export VISUAL='/usr/bin/nano'
 export BROWSER='/usr/bin/firefox'
 
+export PAGER='less -R'
+export DELTA_PAGER="$PAGER"
+
 function addPath
 {
 	export PATH="$PATH:$1"
