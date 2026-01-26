@@ -9,6 +9,7 @@ packages=(
     dconf-editor
     docker
     docker-compose
+    git-delta
     gnome-browser-connector
     gnome-font-viewer
     go
