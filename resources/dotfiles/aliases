@@ -28,6 +28,8 @@ function files {
 # update-grub is already a command on some distros
 [ $(command -v update-grub) ] || alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
+alias diff='delta -s'
+
 # Composer
 
 alias c='composer'
