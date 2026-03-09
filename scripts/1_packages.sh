@@ -8,6 +8,7 @@ packages=(
     composer
     dconf-editor
     docker
+    docker-buildx
     docker-compose
     git-delta
     gnome-browser-connector
