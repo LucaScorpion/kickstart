@@ -30,6 +30,12 @@ source ~/.env
 source ~/.aliases
 source ~/.keybinds
 
+# Secret environment variables (not tracked in repo).
+if [ -f ~/.env-secrets ]
+then
+	source ~/.env-secrets
+fi
+
 # NVM
 if [ -f '/usr/share/nvm/init-nvm.sh' ]
 then
