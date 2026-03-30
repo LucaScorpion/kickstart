@@ -11,6 +11,7 @@ packages=(
     docker-buildx
     docker-compose
     git-delta
+    github-cli
     gnome-browser-connector
     gnome-font-viewer
     go
