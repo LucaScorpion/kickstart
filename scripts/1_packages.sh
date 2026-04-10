@@ -18,6 +18,7 @@ packages=(
     jq
     noto-fonts-emoji
     nvm
+    pdftk
     php
     xclip
     yay
