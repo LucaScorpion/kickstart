@@ -38,6 +38,7 @@ alias cr='composer run'
 # Docker
 
 alias db='docker build'
+alias dl='docker logs'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias stop-all='docker stop $(docker ps -q)'
