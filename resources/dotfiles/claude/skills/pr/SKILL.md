@@ -28,7 +28,10 @@ Check if a PR already exists for the current branch:
 - If a PR exists: update the title and/or body if they are outdated relative to the commits since the PR was opened, using `gh pr edit`.
 If nothing needs updating, leave it as-is and say so.
 
-Write a concise title and a short body describing what changed and why.
+Write a concise title and a body with:
+- A brief summary of what changed and why.
+- A bullet list of the individual changes.
+
 Omit information about tests and static analysis unless this requires special attention.
 Omit headers unless the body requires multiple distinct sections.
 
