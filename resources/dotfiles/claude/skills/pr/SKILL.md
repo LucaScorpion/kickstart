@@ -15,7 +15,7 @@ Git status:
 
 ## 2. Push
 
-Run `git push` (no `-u` flag).
+Run `git push` (without arguments or `-u` flag).
 
 ## 3. Create or update the PR
 
@@ -34,6 +34,8 @@ Write a concise title and a body with:
 
 Omit information about tests and static analysis unless this requires special attention.
 Omit headers unless the body requires multiple distinct sections.
+
+When working on a specific issue, start the body with "Closes #issue-number".
 
 ## 4. Return the PR URL
 
