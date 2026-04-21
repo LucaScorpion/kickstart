@@ -15,7 +15,7 @@ Git status:
 
 ## 2. Push
 
-Run `git push` (without arguments or `-u` flag).
+Run `git push` (without `origin <branch>` or `-u` flag).
 
 ## 3. Create or update the PR
 
