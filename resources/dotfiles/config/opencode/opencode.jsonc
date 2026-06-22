@@ -19,8 +19,10 @@
       "grep *": "allow",
       "head *": "allow",
       "ls *": "allow",
+      "true": "allow",
       "wc *": "allow",
       // gh
+      "gh pr checkout *": "allow",
       "gh pr diff *": "allow",
       "gh pr list *": "allow",
       "gh pr view *": "allow",
