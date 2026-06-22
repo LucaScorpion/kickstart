@@ -1,5 +1,31 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "*": "ask",
+    "edit": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    },
+    "list": "allow",
+    "bash": {
+      // General
+      "find *": "ask", // Find can execute code with `-exec`.
+      "grep *": "allow",
+      "ls *": "allow",
+      "wc *": "allow",
+      // Git
+      "git add *": "allow",
+      "git commit *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "git status *": "allow"
+    }
+  },
   "model": "qwen/qwen3-coder-next",
   "small_model": "google/gemma-4-e4b",
   "provider": {

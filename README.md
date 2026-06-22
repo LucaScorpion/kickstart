@@ -20,6 +20,14 @@ The scripts are made not just to kickstart a fresh installation, but also to upd
 | `6_dconf.sh` | Import dconf settings. These dumps can be created using [dconf-dump.sh](./dconf-dump.sh).
 | `7_docker.sh` | Ensure the Docker service is started and enabled.
 
+### Updating from home dir
+
+Sync dotfiles from your home directory back into `resources/dotfiles/` using:
+
+```shell
+./update_resources.sh
+```
+
 ## Other Info
 
 The info here may differ depending on the specific distro or window manager.
