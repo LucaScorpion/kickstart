@@ -11,6 +11,7 @@
       "*.env.*": "deny",
       "*.env.example": "allow"
     },
+    "skill": "allow",
     "list": "allow",
     "bash": {
       // General
@@ -18,15 +19,20 @@
       "grep *": "allow",
       "ls *": "allow",
       "wc *": "allow",
+      // gh
+      "gh pr diff *": "allow",
+      "gh pr list *": "allow",
+      "gh pr view *": "allow",
       // Git
       "git add *": "allow",
       "git commit *": "allow",
       "git diff *": "allow",
       "git log *": "allow",
-      "git status *": "allow"
+      "git status *": "allow",
+      "git switch *": "allow"
     }
   },
-  "model": "qwen/qwen3-coder-next",
+  "model": "qwen/qwen3.6-35b-a3b",
   "small_model": "google/gemma-4-e4b",
   "provider": {
     "open-webui": {
