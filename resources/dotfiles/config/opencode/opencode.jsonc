@@ -17,6 +17,7 @@
       // General
       "find *": "ask", // Find can execute code with `-exec`.
       "grep *": "allow",
+      "head *": "allow",
       "ls *": "allow",
       "wc *": "allow",
       // gh
