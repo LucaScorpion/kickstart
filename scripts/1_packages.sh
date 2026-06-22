@@ -10,6 +10,7 @@ packages=(
     docker
     docker-buildx
     docker-compose
+    ghostty
     git-delta
     github-cli
     gnome-browser-connector
