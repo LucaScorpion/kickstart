@@ -21,6 +21,7 @@
       "grep *": "allow",
       "head *": "allow",
       "ls *": "allow",
+      "sort *": "allow",
       "true": "allow",
       "wc *": "allow",
       // gh
