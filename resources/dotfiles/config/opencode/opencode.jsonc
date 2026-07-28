@@ -16,6 +16,7 @@
     "list": "allow",
     "bash": {
       // General
+      "echo *": "allow",
       "find *": "ask", // Find can execute code with `-exec`.
       "grep *": "allow",
       "head *": "allow",
@@ -24,14 +25,17 @@
       "wc *": "allow",
       // gh
       "gh pr checkout *": "allow",
+      "gh pr create *": "allow",
       "gh pr diff *": "allow",
       "gh pr list *": "allow",
       "gh pr view *": "allow",
       // Git
       "git add *": "allow",
+      "git branch --show-current": "allow",
       "git commit *": "allow",
       "git diff *": "allow",
       "git log *": "allow",
+      "git push": "allow",
       "git status *": "allow",
       "git switch *": "allow"
     }
