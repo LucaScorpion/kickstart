@@ -25,6 +25,7 @@
       "ls *": "allow",
       "mkdir *": "allow",
       "sort *": "allow",
+      "tail": "allow",
       "true": "allow",
       "wc *": "allow",
       // gh
