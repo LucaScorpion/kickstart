@@ -12,6 +12,7 @@
       "*.env.example": "allow"
     },
     "skill": "allow",
+    "task": "allow",
     "list": "allow",
     "bash": {
       // General
