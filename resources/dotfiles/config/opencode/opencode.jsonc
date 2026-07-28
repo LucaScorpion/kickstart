@@ -16,6 +16,7 @@
     "list": "allow",
     "bash": {
       // General
+      "date *": "allow",
       "echo *": "allow",
       "find *": "ask", // Find can execute code with `-exec`.
       "grep *": "allow",
