@@ -1,0 +1,11 @@
+{
+  // https://opencode.ai/docs/keybinds
+  "$schema": "https://opencode.ai/tui.json",
+  "keybinds": {
+    "input_line_home": "ctrl+a,home",
+    "input_line_end": "ctrl+e,end",
+    // These contain home and end by default, omit those.
+    "messages_first": "ctrl+g",
+    "messages_last": "ctrl+alt+g"
+  }
+}
