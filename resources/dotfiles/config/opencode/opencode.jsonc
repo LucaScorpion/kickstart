@@ -23,6 +23,7 @@
       "grep *": "allow",
       "head *": "allow",
       "ls *": "allow",
+      "mkdir *": "allow",
       "sort *": "allow",
       "true": "allow",
       "wc *": "allow",
