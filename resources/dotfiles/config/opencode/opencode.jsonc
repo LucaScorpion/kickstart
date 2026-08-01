@@ -42,7 +42,11 @@
       "git log *": "allow",
       "git push": "allow",
       "git status *": "allow",
-      "git switch *": "allow"
+      "git switch *": "allow",
+      // pnpm
+      "pnpm format *": "allow",
+      "pnpm fix *": "allow",
+      "pnpm lint *": "allow"
     }
   },
   "model": "qwen/qwen3.6-35b-a3b",
