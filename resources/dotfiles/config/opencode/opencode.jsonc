@@ -18,6 +18,7 @@
     "list": "allow",
     "bash": {
       // General
+      "cp *": "allow",
       "date *": "allow",
       "echo *": "allow",
       "find *": "ask", // Find can execute code with `-exec`.
@@ -25,6 +26,8 @@
       "head *": "allow",
       "ls *": "allow",
       "mkdir *": "allow",
+      "mv *": "allow",
+      "rm *": "allow",
       "sort *": "allow",
       "tail": "allow",
       "true": "allow",
@@ -41,13 +44,15 @@
       "git commit *": "allow",
       "git diff *": "allow",
       "git log *": "allow",
-      "git push": "allow",
+      "git push": "allow", // Specifically without arguments.
       "git status *": "allow",
       "git switch *": "allow",
       // pnpm
-      "pnpm format *": "allow",
-      "pnpm fix *": "allow",
-      "pnpm lint *": "allow"
+      "pnpm add *": "ask",
+      "pnpm dlx *": "ask",
+      "pnpm i *": "ask",
+      "pnpm install *": "ask",
+      "pnpm *": "allow"
     }
   },
   "model": "qwen/qwen3.6-35b-a3b",
