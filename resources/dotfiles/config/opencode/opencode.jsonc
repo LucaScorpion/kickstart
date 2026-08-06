@@ -29,8 +29,8 @@
       "mv *": "allow",
       "rm *": "allow",
       "sort *": "allow",
-      "tail": "allow",
-      "true": "allow",
+      "tail *": "allow",
+      "true *": "allow",
       "wc *": "allow",
       // gh
       "gh pr checkout *": "allow",
