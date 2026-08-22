@@ -56,7 +56,7 @@
     }
   },
   "model": "qwen/qwen3.6-35b-a3b",
-  "small_model": "google/gemma-4-e4b",
+  "small_model": "qwen/qwen3.6-35b-a3b",
   "provider": {
     "open-webui": {
       // Run `/connect` with "Other Custom Provider" to configure the API key, name "open-webui".
@@ -66,8 +66,8 @@
         "baseURL": "https://ai.scalzotto.nl/api"
       },
       "models": {
-        "qwen/qwen3-coder-next": {
-          "name": "Qwen3 Coder Next",
+        "qwen/qwen3.8-27b": {
+          "name": "Qwen3.8 Dense",
           "limit": {
             "context": 262144,
             "output": 65536
@@ -87,10 +87,10 @@
             "output": 65536
           }
         },
-        "google/gemma-4-e4b": {
-          "name": "Gemma 4",
+        "qwen/qwen3-coder-next": {
+          "name": "Qwen3 Coder Next",
           "limit": {
-            "context": 131072,
+            "context": 262144,
             "output": 65536
           }
         }
