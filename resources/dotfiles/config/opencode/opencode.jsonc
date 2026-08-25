@@ -27,6 +27,7 @@
       "ls *": "allow",
       "mkdir *": "allow",
       "mv *": "allow",
+      "rg *": "allow",
       "rm *": "allow",
       "sort *": "allow",
       "tail *": "allow",
