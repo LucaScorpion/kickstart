@@ -34,6 +34,7 @@
       "true *": "allow",
       "wc *": "allow",
       // gh
+      "gh issue view *": "allow",
       "gh pr checkout *": "allow",
       "gh pr create *": "allow",
       "gh pr diff *": "allow",
