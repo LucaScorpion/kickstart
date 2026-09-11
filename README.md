@@ -81,18 +81,23 @@ Faillock configuration can be found in: `/etc/security/faillock.conf`.
 ### Fingerprint
 
 To enable fingerprint scanning, install the `fprintd` package.
-To use it for `sudo`, add the following line to `/etc/pam.d/sudo`:
+To use it for `sudo`, add the following lines to `/etc/pam.d/sudo`:
 
 ```
+auth [success=ignore default=1] pam_exec.so quiet /usr/bin/grep -qs open /proc/acpi/button/lid/LID/state
 auth            sufficient      pam_fprintd.so
 ```
+
+The first line checks if the laptop lid is open, and if not skips the next line,
+so fingerprint authentication is not asked if the lid is closed.
+Source: https://unix.stackexchange.com/a/743941
 
 The complete file should look like this:
 
 ```
 #%PAM-1.0
+auth [success=ignore default=1] pam_exec.so quiet /usr/bin/grep -qs open /proc/acpi/button/lid/LID/state
 auth            sufficient      pam_fprintd.so
-
 auth            include         system-auth
 account         include         system-auth
 session         include         system-auth
