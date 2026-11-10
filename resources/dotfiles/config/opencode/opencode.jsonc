@@ -57,8 +57,8 @@
       "pnpm *": "allow"
     }
   },
-  "model": "qwen/qwen3.6-35b-a3b",
-  "small_model": "qwen/qwen3.6-35b-a3b",
+  "model": "q2_0",
+  "small_model": "q2_0",
   "provider": {
     "open-webui": {
       // Run `/connect` with "Other Custom Provider" to configure the API key, name "open-webui".
@@ -68,6 +68,15 @@
         "baseURL": "https://ai.scalzotto.nl/api"
       },
       "models": {
+        "q2_0": {
+          "name": "Qwen3.8-Flash-Next Q2_0",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        }
+        // Currently unused.
+        /*
         "qwen/qwen3.8-27b": {
           "name": "Qwen3.8 Dense",
           "limit": {
@@ -81,21 +90,8 @@
             "context": 262144,
             "output": 65536
           }
-        },
-        "qwen/qwen3.6-27b": {
-          "name": "Qwen3.6 Dense",
-          "limit": {
-            "context": 262144,
-            "output": 65536
-          }
-        },
-        "qwen/qwen3-coder-next": {
-          "name": "Qwen3 Coder Next",
-          "limit": {
-            "context": 262144,
-            "output": 65536
-          }
         }
+        */
       }
     }
   }
