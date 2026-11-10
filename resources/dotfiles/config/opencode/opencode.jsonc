@@ -1,3 +1,4 @@
+// https://opencode.ai/docs/config/
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": false,
