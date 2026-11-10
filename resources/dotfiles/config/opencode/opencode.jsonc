@@ -13,6 +13,7 @@
       "*.env.example": "allow"
     },
     "skill": "allow",
+    "question": "allow",
     "task": "allow",
     "todowrite": "allow",
     "list": "allow",
