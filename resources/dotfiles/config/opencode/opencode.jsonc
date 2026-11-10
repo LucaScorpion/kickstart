@@ -72,7 +72,7 @@
         "q2_0": {
           "name": "Qwen3.8-Flash-Next Q2_0",
           "limit": {
-            "context": 262144,
+            "context": 131072,
             "output": 65536
           }
         }
